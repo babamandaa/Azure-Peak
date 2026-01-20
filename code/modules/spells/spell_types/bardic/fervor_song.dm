@@ -4,7 +4,7 @@
 	song_tier = 2
 	warnie = "spellwarning"
 	invocations = list("plays a bombastic, rhythmic march! The world feels grounded!") 
-	invocation_type = "shout"
+	invocation_type = "emote"
 	overlay_state = "bardsong_t2_base"
 	action_icon_state = "bardsong_t2_base"
 	song_effect = /datum/status_effect/buff/playing_melody/fervor
