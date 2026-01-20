@@ -2,7 +2,7 @@
 	name = "Resting Rhapsody"
 	desc = "Recuperate your allies spirit's with your song! Refills stamina over time!"
 	song_tier = 2
-	invocations = list("Thy muscles recuperate, thy limbs refresh!") 
+	invocations = list("plays a gentle-yet-refreshing tune. The nearby air clears.") 
 	invocation_type = "shout"
 	overlay_state = "melody_t2_base"
 	action_icon_state = "melody_t2_base"
@@ -14,7 +14,7 @@
 
 /atom/movable/screen/alert/status_effect/buff/song/recovery
 	name = "Musical Recovery"
-	desc = "I am refreshed by the song!"
+	desc = "I breathe deeply. This melody refreshes me - I could run for hours."
 	icon_state = "buff"
 
 /datum/status_effect/buff/song/recovery
