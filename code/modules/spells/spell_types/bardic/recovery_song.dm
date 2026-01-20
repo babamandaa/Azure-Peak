@@ -3,7 +3,7 @@
 	desc = "Recuperate your allies spirit's with your song! Refills stamina over time!"
 	song_tier = 2
 	invocations = list("plays a gentle-yet-refreshing tune. The nearby air clears.") 
-	invocation_type = "shout"
+	invocation_type = "emote"
 	overlay_state = "melody_t2_base"
 	action_icon_state = "melody_t2_base"
 	song_effect = /datum/status_effect/buff/playing_melody/recovery
