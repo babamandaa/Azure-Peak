@@ -79,9 +79,10 @@
 	desc = "The growing dark limns your vision more with every passing day: your flesh and mind are failing you, and destiny has turned her gaze from you. How will your tale endure such hardship?"
 	stat_array = list(STAT_STRENGTH = -4, STAT_PERCEPTION = -4, STAT_INTELLIGENCE = -4, STAT_CONSTITUTION = -4, STAT_WILLPOWER = -4, STAT_SPEED = -4, STAT_FORTUNE = -4)
 
-/datum/statpack/wildcard/austere
-	name = "Austere"
-	desc = "You've kept your humors balanced, your body honed and mind sharp enough. Fate has left you mostly unchanged, in every way."
+/datum/statpack/wildcard/heroic
+	name = "Heroic"
+	desc = "You're the complete package. You haven't any standout talents, but that doesn't matter - the universe loves a polymath."
+	stat_array = list(STAT_FORTUNE = 1)
 
 /datum/statpack/wildcard/virtuous
 	name = "Virtuous"
