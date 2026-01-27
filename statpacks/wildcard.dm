@@ -2,7 +2,7 @@
 
 /datum/statpack/wildcard/plucky
 	name = "Plucky"
-	desc = "You may not be the smartest, toughest, or fastest, but you more than make up for it in heart, and the fates love heart the most."
+	desc = "You may not be the smartest, toughest, or fastest, but you more than make up for it in heart, and for the fates, heart is enough."
 	stat_array = list(STAT_STRENGTH = -2, STAT_PERCEPTION = -2, STAT_INTELLIGENCE = -2, STAT_CONSTITUTION = -2, STAT_WILLPOWER = -2, STAT_SPEED = -2, STAT_FORTUNE = 3)
 
 /datum/statpack/wildcard/fated
