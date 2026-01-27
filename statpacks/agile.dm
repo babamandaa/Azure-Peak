@@ -11,13 +11,13 @@
 
 /datum/statpack/agile/tricky
 	name = "Tricky"
-	desc = "Swift feet with a mind to match and a tiny sliver of the Ten's own luck."
+	desc = "You've got eyes in the back of your head, and the guts to put them to use. Just remember that no one is untouchable."
 	stat_array = list(STAT_PERCEPTION = 1, STAT_INTELLIGENCE = 1, STAT_SPEED = 1, STAT_WILLPOWER = -1, STAT_STRENGTH = -1)
 
 /datum/statpack/agile/thug
 	name = "Thuggish"
-	desc = "Your robust physique and keen eyes oft been your most valuable friends in such trying times."
-	stat_array = list(STAT_STRENGTH = 2, STAT_PERCEPTION = 1, STAT_CONSTITUTION = -1, STAT_INTELLIGENCE = -1, STAT_SPEED = -1)
+	desc = "You're not book smart, you're street smart. You know the best place to put a cudgel to get someone to listen to you."
+	stat_array = list(STAT_STRENGTH = 2, STAT_PERCEPTION = 1, STAT_INTELLIGENCE = -1, STAT_SPEED = -1)
 
 /datum/statpack/agile/erudite
 	name = "Erudite"
