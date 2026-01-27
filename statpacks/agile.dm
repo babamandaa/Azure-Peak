@@ -4,9 +4,9 @@
 	desc = "The wind in your hair is all that matters. Run fast, run far; if they catch you, they will kill you, but first they must catch you."
 	stat_array = list(STAT_SPEED = 2, STAT_WILLPOWER = 2, STAT_STRENGTH = -1, STAT_CONSTITUTION = -1, STAT_PERCEPTION = -1)
 
-/datum/statpack/agile/hardy
-	name = "Hardy"
-	desc = "Uniquely Pestran fortitude affords you the means to shrug off illnesses and poisons that others might not."
+/datum/statpack/agile/enduring
+	name = "Enduring"
+	desc = "For the sake of yourself, and for others, you must always stand tall. It's what the universe needs from you."
 	stat_array = list(STAT_CONSTITUTION = 3, STAT_WILLPOWER = 3, STAT_PERCEPTION = -1, STAT_SPEED = -2)
 
 /datum/statpack/agile/tricky
