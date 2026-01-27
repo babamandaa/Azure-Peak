@@ -34,3 +34,8 @@
 	desc = "You're not necessarily standout in a fight, but you've cultivated yourself in other ways. Grants a second virtue."
 	stat_array = list(STAT_INTELLIGENCE = 1, STAT_FORTUNE = 1, STAT_STRENGTH = -2, STAT_SPEED = -2)
 	virtuous = TRUE
+
+/datum/statpack/agile/deft
+	name = "Deft"
+	desc = "You are the meaning of the phrase death by a thousand cuts. After all, it only takes one to nick an artery or catch an eye. Who cares if it takes a while to get there?"
+	stat_array = list(STAT_PERCEPTION = 1, STAT_SPEED = 1, STAT_WILLPOWER = 1, STAT_STRENGTH = -1) //i really don't want to re-add this one because it's super meta and gives swift builds everything they could possibly want.
