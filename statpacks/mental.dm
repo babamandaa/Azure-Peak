@@ -43,3 +43,23 @@
 	name = "Vile"
 	desc = "You evil schemer, you dastardly daredevil, you vile cur! Your plans always go off without a hitch, and when they don't? It was still a part of your plan."
 	stat_array =  list(STAT_FORTUNE = 1, STAT_PERCEPTION = 1, STAT_INTELLIGENCE = 1, STAT_STRENGTH = -1, STAT_WILLPOWER = -1)
+
+/datum/statpack/mental/diligent
+	name = "Diligent"
+	desc = "You take your time, meticulously picking apart problems and enemies alike with surgical precision. A scalpel in a world of hammers, you are."
+	stat_array =  list(STAT_INTELLIGENCE = 2, STAT_WILLPOWER = 1, STAT_SPEED = -1)
+
+/datum/statpack/mental/industrious
+	name = "Industrious"
+	desc = "You're not a time waster, god damn it. If you're not first, you're last, and you need to be the best of the best just to get by in this world."
+	stat_array =  list(STAT_INTELLIGENCE = 2, STAT_SPEED = 1, STAT_CONSTITUTION = -1, STAT_PERCEPTION = -1)
+
+/datum/statpack/physical/struggler
+	name = "Struggler"
+	desc = "You struggle. You're really, really good at it; but you're still struggling at the end of the day."
+	stat_array = list(STAT_STRENGTH = 2, STAT_CONSTITUTION = 2, STAT_WILLPOWER = 2, STAT_INTELLIGENCE = -3, STAT_PERCEPTION = -3, STAT_FORTUNE = -2)
+
+/datum/statpack/physical/enduring
+	name = "Enduring"
+	desc = "Those who do not stand stalwart will pay the price; you will endure until the day you die, as Psydon wills it so."
+	stat_array = list(STAT_CONSTITUTION = 3, STAT_WILLPOWER = 3, STAT_SPEED = -4)
