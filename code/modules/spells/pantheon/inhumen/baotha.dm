@@ -364,7 +364,7 @@
 	target.AddComponent(/datum/component/baotha_joyride/partner, target, user, holy_skill)
 
 	user.visible_message(
-		span_notice(""[user] and [target] inhale a magenta mist. A strange aching feeling pounds in your chest."),			//baotha, goddess of combat-cuckolding
+		span_notice("[user] and [target] inhale a magenta mist. A strange aching feeling pounds in your chest."),			//baotha, goddess of combat-cuckolding
 	)
 	return TRUE
 
