@@ -73,14 +73,14 @@
 			if("Discipline - Stalker")
 				H.adjust_skillrank_up_to(/datum/skill/combat/swords, SKILL_LEVEL_EXPERT, TRUE)
 				beltr = /obj/item/rogueweapon/scabbard/sword
-				r_hand = /obj/item/rogueweapon/sword/falx/stalker //functionally identical, but has the swift tag on it so you can use your speed to shred people. you're a lighter, faster berserker.
-				armor = /obj/item/clothing/suit/roguetown/armor/regenerating/skin/disciple/berserker
+				r_hand = /obj/item/rogueweapon/sword/falx/stalker //functionally identical, but has the swift tag on it so you can use your speed to shred people. you're a lighter, faster berserker. rambo vs. conan
+				armor = /obj/item/clothing/suit/roguetown/armor/regenerating/skin/disciple/stalker // -50 integrity
 				H.change_stat(STATKEY_STR, -1) 
 				H.change_stat(STATKEY_SPD, 1)
 				H.change_stat(STATKEY_CON, -1)
 				H.change_stat(STATKEY_WIL, 1) //goes from 3/-1/-1/2/1/1 to 2/-1/-1/1/2/2. 
 			if("Katar")
-				H.adjust_skillrank_up_to(/datum/skill/combat/unarmed, SKILL_LEVEL_MASTER, TRUE) //these are strictly all worse than discipline - unarmed but i'm worried i'll get shot if i touch them
+				H.adjust_skillrank_up_to(/datum/skill/combat/unarmed, SKILL_LEVEL_MASTER, TRUE) //these are strictly all worse than unarmed but i'm worried i'll get shot if i touch them
 				H.adjust_skillrank_up_to(/datum/skill/combat/wrestling, SKILL_LEVEL_EXPERT, TRUE)
 				beltr = /obj/item/rogueweapon/katar
 			if("Knuckledusters")
@@ -96,11 +96,13 @@
 				beltr = /obj/item/rogueweapon/stoneaxe/battle
 				ADD_TRAIT(H, TRAIT_NOPAINSTUN, TRAIT_GENERIC)
 				ADD_TRAIT(H, TRAIT_CRITICAL_RESISTANCE, TRAIT_GENERIC)
+				REMOVE_TRAIT(H, TRAIT_BLOOD_RESISTANCE, TRAIT_GENERIC) 
 			if("Grand Mace")
 				H.adjust_skillrank_up_to(/datum/skill/combat/maces, SKILL_LEVEL_EXPERT, TRUE)
 				beltr = /obj/item/rogueweapon/mace/goden/steel
 				ADD_TRAIT(H, TRAIT_NOPAINSTUN, TRAIT_GENERIC)
 				ADD_TRAIT(H, TRAIT_CRITICAL_RESISTANCE, TRAIT_GENERIC)
+				REMOVE_TRAIT(H, TRAIT_BLOOD_RESISTANCE, TRAIT_GENERIC)
 
 		var/helmets = list("Berserker's Volfskulle Bascinet","Steel Kettle + Wildguard")
 		var/helmet_choice = input(H, "Choose your HELMET.", "STEEL YOURSELF.") as anything in helmets
