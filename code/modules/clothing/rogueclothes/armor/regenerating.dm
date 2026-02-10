@@ -188,6 +188,12 @@
 	desc = "I've endured enough. The onslaught has lost its meaning."
 	armor = ARMOR_LEATHER
 
+/obj/item/clothing/suit/roguetown/armor/regenerating/skin/disciple/stalker
+	name = "stalker's skin"
+	desc = "One notch, for each successful hunt. One incense burn, for each failed. Every wound is a reminder that you are but mortal."
+	max_integrity = 350
+	armor = ARMOR_LEATHER
+
 /obj/item/clothing/suit/roguetown/armor/regenerating/skin/disciple/bailiff
 	name = "executioneer's skin"
 	desc = "Bearing scars of countless whips leaves a gnarly visage. Now it's your time to inflict the same fate upon others."
