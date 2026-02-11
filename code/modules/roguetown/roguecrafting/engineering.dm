@@ -5,8 +5,9 @@
 	name = "artificer table"
 	category = "Machines"
 	result = /obj/machinery/artificer_table
-	reqs = list(/obj/item/natural/wood/plank = 2,
-				/obj/item/roguegear = 2)
+	reqs = list(/obj/item/grown/log/tree/small = 2,
+				/obj/item/natural/stone = 2
+				/obj/item/natural/cloth = 1)
 	skillcraft = /datum/skill/craft/engineering
 	verbage_simple = "constructs"
 	verbage = "constructs"
@@ -580,56 +581,51 @@
 
 //increasing the number to reflect the effort it takes to get fyritius and firedust
 /datum/crafting_recipe/roguetown/engineering/impactexplosive
-	name = "impact grenades (x3)"
+	name = "impact grenades (x2)"
 	category = "Explosives"
 	result = list(/obj/item/impact_grenade/explosion,
-				  /obj/item/impact_grenade/explosion,
-				  /obj/item/impact_grenade/explosion)
-	reqs = list(/obj/item/natural/clay = 1, /obj/item/paper = 1, /obj/item/alch/coaldust = 1, /obj/item/alch/firedust = 1, /obj/item/reagent_containers/food/snacks/grown/rogue/fyritius = 1)
+				  /obj/item/impact_grenade/explosion,)
+	reqs = list(/obj/item/natural/clay = 1, /obj/item/paper = 1, /obj/item/natural/dirtclod = 1, /obj/item/reagent_containers/food/snacks/grown/rogue/fyritius = 1)
 	structurecraft = /obj/machinery/artificer_table
 	skillcraft = /datum/skill/craft/engineering
 	craftdiff = 4
 
 /datum/crafting_recipe/roguetown/engineering/impactsmoke
-	name = "smoke grenades (x3)"
+	name = "smoke grenades (x2)"
 	category = "Explosives"
 	result = list(/obj/item/impact_grenade/smoke, 
-				  /obj/item/impact_grenade/smoke,
 				  /obj/item/impact_grenade/smoke,)
-	reqs =  list(/obj/item/smokeshell = 3, /obj/item/alch/coaldust = 1, /obj/item/ash = 1, /datum/reagent/water = 48)
+	reqs =  list(/obj/item/reagent_containers/food/snacks/egg = 2, /obj/item/natural/dirtclod = 1, /obj/item/ash = 1, /datum/reagent/water = 48)
 	structurecraft = /obj/machinery/artificer_table
 	skillcraft = /datum/skill/craft/engineering
 	craftdiff = 4
 
 /datum/crafting_recipe/roguetown/engineering/impactpoisonsmoke
-	name = "smoke grenades, poisonous (x3)"
+	name = "smoke grenades, poisonous (x2)"
 	category = "Explosives"
 	result = list(/obj/item/impact_grenade/smoke/poison_gas,
-				  /obj/item/impact_grenade/smoke/poison_gas,
-				  /obj/item/impact_grenade/smoke/poison_gas)
-	reqs =  list(/obj/item/smokeshell = 3, /obj/item/alch/coaldust = 1, /obj/item/ash = 1, /datum/reagent/berrypoison = 5, /obj/item/alch/airdust = 1, /datum/reagent/water = 48)
+				  /obj/item/impact_grenade/smoke/poison_gas,)
+	reqs =  list(/obj/item/reagent_containers/food/snacks/egg = 2, /obj/item/natural/dirtclod = 1, /obj/item/ash = 1, /datum/reagent/water = 48, /datum/reagent/berrypoison = 5)
 	structurecraft = /obj/machinery/artificer_table
 	skillcraft = /datum/skill/craft/engineering
 	craftdiff = 4
 
 /datum/crafting_recipe/roguetown/engineering/impactfiresmoke
-	name = "smoke grenades, incendiary (x3)"
+	name = "smoke grenades, incendiary (x2)"
 	category = "Explosives"
 	result = list(/obj/item/impact_grenade/smoke/fire_gas,
-				  /obj/item/impact_grenade/smoke/fire_gas,
-				  /obj/item/impact_grenade/smoke/fire_gas)
-	reqs =  list(/obj/item/smokeshell = 3, /obj/item/alch/coaldust = 2, /obj/item/ash = 1, /obj/item/alch/firedust = 1, /obj/item/alch/solardust = 1, /datum/reagent/water = 48)
+				  /obj/item/impact_grenade/smoke/fire_gas,)
+	reqs =  list(/obj/item/reagent_containers/food/snacks/egg = 2, /obj/item/natural/dirtclod = 1, /obj/item/ash = 1, /datum/reagent/water = 48, /obj/item/reagent_containers/food/snacks/grown/rogue/fyritius = 1)
 	structurecraft = /obj/machinery/artificer_table
 	skillcraft = /datum/skill/craft/engineering
 	craftdiff = 4
 
 /datum/crafting_recipe/roguetown/engineering/impactblindingsmoke
-	name = "smoke grenades, blinding (x3)"
+	name = "smoke grenades, blinding (x2)"
 	category = "Explosives"
 	result = list(/obj/item/impact_grenade/smoke/blind_gas,
-				  /obj/item/impact_grenade/smoke/blind_gas,
-				  /obj/item/impact_grenade/smoke/blind_gas)
-	reqs =  list(/obj/item/smokeshell = 3, /obj/item/alch/coaldust = 1, /obj/item/ash = 1, /obj/item/reagent_containers/food/snacks/rogue/veg/onion_sliced = 1, /obj/item/natural/dirtclod = 1, /datum/reagent/water = 48)
+				  /obj/item/impact_grenade/smoke/blind_gas,)
+	reqs =  list(/obj/item/reagent_containers/food/snacks/egg = 2, /obj/item/natural/dirtclod = 1, /obj/item/ash = 1, /datum/reagent/water = 48, /obj/item/reagent_containers/food/snacks/grown/rogue/fyritius = 1)
 	structurecraft = /obj/machinery/artificer_table
 	skillcraft = /datum/skill/craft/engineering
 	craftdiff = 4
