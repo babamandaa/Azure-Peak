@@ -282,6 +282,35 @@
 			partner.adjust_triumphs(1)
 			to_chat(partner, span_love("Our loving is a true TRIUMPH!"))
 
+	if(HAS_TRAIT(user, TRAIT_DEPRAVED) && user.cmode) //evil leveldrain. if you finish sex in combat mode you drain stats from people
+		var/datum/status_effect/buff/baothasbanquet/boost_buff = user.has_status_effect(/datum/status_effect/buff/baothasbanquet)
+		if(boost_buff)
+			boost_buff.tier_up(target)
+		else
+			boost_buff = user.apply_status_effect(/datum/status_effect/buff/baothasbanquet)
+			boost_buff.poor_bastards += target
+		var/datum/status_effect/debuff/baothadrained/drain_debuff = target.has_status_effect(/datum/status_effect/debuff/baothadrained)
+		if(drain_debuff)
+			drain_debuff.tier_up()
+		else
+			target.apply_status_effect(/datum/status_effect/debuff/baothadrained)
+		target.playsound_local(user, 'sound/misc/mat/lvldown.ogg', 100)
+	
+	if(HAS_TRAIT(target, TRAIT_DEPRAVED) && target.cmode)
+		var/datum/status_effect/buff/baothasbanquet/boost_buff = target.has_status_effect(/datum/status_effect/buff/baothasbanquet)
+		if(boost_buff)
+			boost_buff.tier_up(user)
+		else
+			boost_buff = target.apply_status_effect(/datum/status_effect/buff/baothasbanquet)
+			boost_buff.poor_bastards += user
+		var/datum/status_effect/debuff/baothadrained/drain_debuff = user.has_status_effect(/datum/status_effect/debuff/baothadrained)
+		if(drain_debuff)
+			drain_debuff.tier_up()
+		else
+			user.apply_status_effect(/datum/status_effect/debuff/baothadrained)
+		user.playsound_local(user, 'sound/misc/mat/lvldown.ogg', 100)
+		
+
 
 /datum/component/arousal/proc/set_charge(amount)
 	var/empty = (charge < CHARGE_FOR_CLIMAX)
@@ -434,6 +463,8 @@
 			return 2.0
 		if(SEX_FORCE_EXTREME)
 			return 3.0
+		if(HAS_TRAIT(target, TRAIT_DEPRAVED)
+			return 0.9
 
 /datum/component/arousal/proc/get_speed_pain_multiplier(passed_speed)
 	switch(passed_speed)
@@ -441,7 +472,69 @@
 			return 0.8
 		if(SEX_SPEED_MID)
 			return 1.0
+		if(HAS_TRAIT(target, TRAIT_DEPRAVED)
+			return 1.1
 		if(SEX_SPEED_HIGH)
 			return 1.2
 		if(SEX_SPEED_EXTREME)
 			return 1.4
+
+/datum/status_effect/buff/baothasbanquet
+	id = "baothasbanquet"
+	alert_type = /atom/movable/screen/alert/status_effect/buff/baothasbanquet
+	effectedstats = list("strength" = 1, "speed" = 1, "endurance" = 1, "constitution" = 1)
+	duration = 20 MINUTES
+	var/tier = 1
+	var/list/poor_bastards = list()
+
+/atom/movable/screen/alert/status_effect/buff/baothasbanquet
+	name = "Baotha's Banquet (I)"
+	desc = "I feel invigorated after partaking in another's energy. I could go for hours..."
+	icon_state = "baothasbanquet"
+
+/datum/status_effect/buff/baothasbanquet/proc/tier_up(var/mob/living/poor_sod)
+	refresh()
+	if(poor_sod in poor_bastards)
+		return
+	poor_bastards += poor_sod
+	if(tier < 3)
+		on_remove()
+		tier++
+		switch(tier)
+			if(2)
+				effectedstats = list("strength" = 1, "speed" = 1, "endurance" = 2, "constitution" = 2)
+				linked_alert.name = "Baotha's Banquet (II)"
+				linked_alert.desc = "The strength of my partner nourishes me! The taste of their soul is still on my lips!"
+			if(3)
+				effectedstats = list("strength" = 1, "speed" = 1, "endurance" = 3, "constitution" = 3)
+				linked_alert.name = "Baotha's Banquet (III)"
+				linked_alert.desc = "This power is ADDICTING! Their weakness makes me powerful!"
+		on_apply()
+
+/datum/status_effect/debuff/baothadrained
+	id = "baothadrained"
+	alert_type = /atom/movable/screen/alert/status_effect/debuff/baothadrained
+	effectedstats = list("strength" = -1, "intelligence" = -3, "perception" = -2 , "speed" = -1, "endurance" = 1, "constitution" = 1)
+	duration = 15 MINUTES
+	var/tier = 1
+
+/atom/movable/screen/alert/status_effect/debuff/baothadrained
+	name = "Vitality Drained (I)"
+	desc = "I'm having a hard time thinking clearly... maybe I could go for another round?"
+	icon_state = "baothadrained"
+
+/datum/status_effect/debuff/baothadrained/proc/tier_up()
+	refresh()
+	if(tier < 3)
+		on_remove()
+		tier++
+		switch(tier)
+			if(2)
+				effectedstats = list("strength" = -3, "intelligence" = -6, "perception" = -3 , "speed" = -2, "endurance" = 2, "constitution" = 2)
+				linked_alert.name = "Vitality Drained (II)"
+				linked_alert.desc = "W-what's going on..? I feel like I can't move, but my body feels compelled to continue, like everything's in a dream..."
+			if(3)
+				effectedstats = list("strength" = -4, "intelligence" = -10, "perception" = -4 , "speed" = -3, "endurance" = -4, "constitution" = -4 "fortune" = -1) //if someone is abusing this for non-erp purposes they should get fucking cratered but it's still really hot to be helpless so whatever
+				linked_alert.name = "Vitality Drained (III)"
+				linked_alert.desc = "M-my light is gone. They've taken everything, but I don't care... oblivion feels like love."
+		on_apply()
