@@ -395,7 +395,7 @@ GLOBAL_LIST_INIT(roguetraits, list(
 	TRAIT_LYCANRESILENCE = span_info("Dendor's fury flows through my veins, my wounds regenerate over time..."),
 	TRAIT_FORTITUDE = span_info("The typical drain I feel from day to day life is lessened, my athleticism greater."),
 	TRAIT_GUIDANCE = span_info("The arcyne aides me in battle."),
-	TRAIT_DEPRAVED = span_info("The languid scent of Her debauchery is known to me."),
+	TRAIT_DEPRAVED = span_info("I can smell the sweet scent of her blessings on others, and can also drain energy through sex whilst in combat mode."),
 	TRAIT_SILVER_BLESSED = span_info("I have been baptized in fire. Blessed silverdust flows through my blood, protecting me from both vampyrism and lycanthropy."),
 	TRAIT_UNLYCKERABLE = span_info("My kind cannot bear the Sun curse for it already has another."),
 	TRAIT_GOODTRAINER = span_info("I am a good teacher, and when it comes to weaponry I can train others to be just as skilled as I am."),
