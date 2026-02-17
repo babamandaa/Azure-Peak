@@ -463,7 +463,7 @@
 			return 2.0
 		if(SEX_FORCE_EXTREME)
 			return 3.0
-		if(HAS_TRAIT(target, TRAIT_DEPRAVED)
+		if(HAS_TRAIT(target, TRAIT_DEPRAVED))
 			return 0.9
 
 /datum/component/arousal/proc/get_speed_pain_multiplier(passed_speed)
@@ -472,12 +472,12 @@
 			return 0.8
 		if(SEX_SPEED_MID)
 			return 1.0
-		if(HAS_TRAIT(target, TRAIT_DEPRAVED)
-			return 1.1
 		if(SEX_SPEED_HIGH)
 			return 1.2
 		if(SEX_SPEED_EXTREME)
 			return 1.4
+		if(HAS_TRAIT(target, TRAIT_DEPRAVED))
+			return 0.9
 
 /datum/status_effect/buff/baothasbanquet
 	id = "baothasbanquet"
