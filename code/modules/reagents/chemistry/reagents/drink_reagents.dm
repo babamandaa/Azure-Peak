@@ -98,3 +98,24 @@
 		if(H.blood_volume < BLOOD_VOLUME_NORMAL)
 			H.blood_volume = min(H.blood_volume+10, BLOOD_VOLUME_NORMAL)
 	..()
+
+/datum/reagent/consumable/bmilk
+	name = "Breast Milk"
+	description = "An opaque white liquid produced by the mammary glands of mammals. Unfit for anything but drinking." 
+	color = "#DBDACB" // rgb: 219, 218, 203
+	taste_description = "milk"
+	glass_icon_state = "glass_white"
+	glass_name = "glass of breast milk"
+	glass_desc = ""
+
+/datum/reagent/consumable/bmilk/on_mob_life(mob/living/carbon/M)
+	if(M.getBruteLoss() && prob(20))
+		M.heal_bodypart_damage(1,0, 0)
+		. = 1
+	if(ishuman(M))
+		var/mob/living/carbon/human/H = M
+		if(!HAS_TRAIT(H, TRAIT_NOHUNGER))
+			H.adjust_hydration(10)
+		if(H.blood_volume < BLOOD_VOLUME_NORMAL)
+			H.blood_volume = min(H.blood_volume+10, BLOOD_VOLUME_NORMAL)
+	..()
