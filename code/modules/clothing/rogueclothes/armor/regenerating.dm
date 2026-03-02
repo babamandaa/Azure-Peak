@@ -200,18 +200,18 @@
 	resistance_flags = FIRE_PROOF
 	icon_state = "easttats"
 	armor = ARMOR_RUMACLAN
-	body_parts_covered = COVERAGE_ALL_BUT_HANDFEET
-	body_parts_inherent = COVERAGE_ALL_BUT_HANDFEET
+	body_parts_covered = COVERAGE_ALL // i don't think that the problem with the tats was that they covered feet, so they get their full coverage below the neck back.
+	body_parts_inherent = COVERAGE_ALL
 	icon = 'icons/roguetown/clothing/shirts.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/shirts.dmi'
 	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_shirts.dmi'
 	allowed_race = NON_DWARVEN_RACE_TYPES
-	max_integrity = 325 //compensation buffs because they're no longer better than plate
+	max_integrity = 345 //compensation buffs because they're no longer better than plate. between adv and wretch tier like god intended
 
 	repairmsg_begin = "The tattoos begin to slowly mend their abuse..."
 	repairmsg_continue = "The tattoos mend some of their abuse..."
 	repairmsg_stop = "The tattoos stops mending from the onslaught!"
 	repairmsg_end = "The tattoos flow more calmly, as they finish resting and regain their strength."
 
-	interrupt_damount = 25
-	repair_time = 35 SECONDS
+	interrupt_damount = 15 //lowered a bit, shouldn't be regenning in combat anyways
+	repair_time = 30 SECONDS
