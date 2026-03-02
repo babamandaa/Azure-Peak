@@ -7,14 +7,13 @@
 	subclass_languages = list(/datum/language/kazengunese)
 	class_select_category = CLASS_CAT_KAZENGUN
 	category_tags = list(CTAG_MERCENARY)
-	traits_applied = list(TRAIT_CRITICAL_RESISTANCE, TRAIT_HARDDISMEMBER, TRAIT_NOPAINSTUN, TRAIT_HONORBOUND)
+	traits_applied = list(TRAIT_NOPAINSTUN, TRAIT_HONORBOUND)
 	cmode_music = 'sound/music/combat_kazengite.ogg'
 	subclass_stats = list(
 		STATKEY_CON = 3,
 		STATKEY_WIL = 3,
 		STATKEY_STR = 2,
-		STATKEY_PER = 1,
-		STATKEY_SPD = -1
+		STATKEY_PER = -1 //hahahahaha -1 speed +1 per on a class with a swift balanced weapon i know what you are
 	)
 	subclass_skills = list(
 		/datum/skill/misc/swimming = SKILL_LEVEL_APPRENTICE,
