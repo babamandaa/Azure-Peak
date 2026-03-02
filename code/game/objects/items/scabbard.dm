@@ -549,12 +549,11 @@
 	force = 20
 	valid_blade = /obj/item/rogueweapon/sword/sabre/mulyeog
 	associated_skill = /datum/skill/combat/swords
-	possible_item_intents = list(SHIELD_BASH, SHIELD_BLOCK)
+	possible_item_intents = list(SHIELD_BASH, SHIELD_BLOCK) // blocking arrows with a scabbard lmao
 	can_parry = TRUE
 	wdefense = 8
 	special = /datum/special_intent/limbguard
-
-	max_integrity = 0
+	max_integrity = 120 // so, before these were literally fucking unbreakable. like - it wasn't an oversight. this was coded in on purpose. you just had a fucking 8 wdefense shield that was unbreakable and prevented your sword from getting chipped. and they buffed it. absolutely fucking not
 
 /obj/item/rogueweapon/scabbard/sword/kazengun/noparry
 	name = "ceremonial kazengun scabbard"
@@ -600,8 +599,7 @@
 	possible_item_intents = list(SHIELD_BASH, SHIELD_BLOCK)
 	can_parry = TRUE
 	wdefense = 3
-
-	max_integrity = 0
+	max_integrity = 120 //are you for fucking real
 
 /obj/item/rogueweapon/scabbard/sheath/courtphysician
 	name = "fancy cane"
