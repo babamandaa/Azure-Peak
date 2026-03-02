@@ -206,7 +206,7 @@
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/shirts.dmi'
 	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_shirts.dmi'
 	allowed_race = NON_DWARVEN_RACE_TYPES
-	max_integrity = 300 //compensation buffs because they're no longer Better Than Fucking Plate
+	max_integrity = 325 //compensation buffs because they're no longer Better Than Fucking Plate
 
 	repairmsg_begin = "The tattoos begin to slowly mend their abuse..."
 	repairmsg_continue = "The tattoos mend some of their abuse..."
