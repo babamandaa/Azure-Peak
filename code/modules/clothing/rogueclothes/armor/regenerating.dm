@@ -200,8 +200,8 @@
 	resistance_flags = FIRE_PROOF
 	icon_state = "easttats"
 	armor = ARMOR_RUMACLAN
-	body_parts_covered = COVERAGE_ALL // i don't think that the problem with the tats was that they covered feet, so they get their full coverage below the neck back.
-	body_parts_inherent = COVERAGE_ALL
+	body_parts_covered = COVERAGE_FULL // i don't think that the problem with the tats was that they covered feet, so they get their full coverage below the neck back.
+	body_parts_inherent = COVERAGE_FULL
 	icon = 'icons/roguetown/clothing/shirts.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/shirts.dmi'
 	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_shirts.dmi'
