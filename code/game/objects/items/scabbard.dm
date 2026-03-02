@@ -549,11 +549,11 @@
 	force = 20
 	valid_blade = /obj/item/rogueweapon/sword/sabre/mulyeog
 	associated_skill = /datum/skill/combat/swords
-	possible_item_intents = list(SHIELD_BASH, SHIELD_BLOCK) // blocking arrows with a scabbard lmao
+	possible_item_intents = list(SHIELD_BASH) // probably can't block arrows with a scabbard
 	can_parry = TRUE
 	wdefense = 8
 	special = /datum/special_intent/limbguard
-	max_integrity = 180 // so, before these were literally unbreakable. like - it wasn't an oversight. this was coded in on purpose. you just had an 8 wdefense shield that was unbreakable and prevented your sword from getting chipped. and they buffed it. absolutely fucking not
+	max_integrity = 230 // so, before these were literally unbreakable due to a band-aid fix that never got patched. it was really bad for a lot of reasons. now they're just a little bit better than a normal heater shield. still pretty good
 
 /obj/item/rogueweapon/scabbard/sword/kazengun/noparry
 	name = "ceremonial kazengun scabbard"
