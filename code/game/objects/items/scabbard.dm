@@ -551,7 +551,7 @@
 	associated_skill = /datum/skill/combat/swords
 	possible_item_intents = list(SHIELD_BASH) // probably can't block arrows with a scabbard
 	can_parry = TRUE
-	wdefense = 8
+	wdefense = 10
 	special = /datum/special_intent/limbguard
 	max_integrity = 230 // so, before these were literally unbreakable due to a band-aid fix that never got patched. it was really bad for a lot of reasons. now they're just a little bit better than a normal heater shield. still pretty good
 
