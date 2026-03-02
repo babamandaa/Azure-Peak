@@ -553,7 +553,7 @@
 	can_parry = TRUE
 	wdefense = 8
 	special = /datum/special_intent/limbguard
-	max_integrity = 120 // so, before these were literally fucking unbreakable. like - it wasn't an oversight. this was coded in on purpose. you just had a fucking 8 wdefense shield that was unbreakable and prevented your sword from getting chipped. and they buffed it. absolutely fucking not
+	max_integrity = 180 // so, before these were literally unbreakable. like - it wasn't an oversight. this was coded in on purpose. you just had an 8 wdefense shield that was unbreakable and prevented your sword from getting chipped. and they buffed it. absolutely fucking not
 
 /obj/item/rogueweapon/scabbard/sword/kazengun/noparry
 	name = "ceremonial kazengun scabbard"
