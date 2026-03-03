@@ -14,7 +14,8 @@
 		STATKEY_CON = 3,
 		STATKEY_WIL = 3,
 		STATKEY_STR = 2,
-		STATKEY_PER = -1
+		STATKEY_PER = 1
+		STATKEY_SPE = -1
 	)
 	subclass_skills = list(
 		/datum/skill/misc/swimming = SKILL_LEVEL_APPRENTICE,
