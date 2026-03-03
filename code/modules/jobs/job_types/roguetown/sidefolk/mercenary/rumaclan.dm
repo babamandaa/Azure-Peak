@@ -13,7 +13,8 @@
 		STATKEY_CON = 3,
 		STATKEY_WIL = 3,
 		STATKEY_STR = 2,
-		STATKEY_PER = -1 // trading off -1 spe for -1 per so they don't have amazing offense AND defense
+		STATKEY_PER = 1
+		STATKEY_SPE = -1
 	)
 	subclass_skills = list(
 		/datum/skill/misc/swimming = SKILL_LEVEL_APPRENTICE,
