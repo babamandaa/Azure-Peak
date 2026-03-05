@@ -60,7 +60,7 @@
 		/obj/item/rogueweapon/huntingknife/idagger/steel/special = 1
 		)
 	if(H.mind)
-		var/weapons = list("Rapier","Parrying Dagger", "Whip")
+		var/weapons = list("Rapier","Parrying Dagger", "Whip", "Cudgel")
 		var/weapon_choice = input(H, "Choose your weapon.", "TAKE UP ARMS") as anything in weapons
 		var/specialization = list("Fleet-Footed","Marksmanship","Athleticism","Night-Burglar","Master-Tracker","Dualist")
 		var/specialization_choice = input(H, "Choose your talent.", "TAKE UP ARMS") as anything in specialization
@@ -76,6 +76,9 @@
 			if ("Whip")
 				H.adjust_skillrank_up_to(/datum/skill/combat/whipsflails, SKILL_LEVEL_EXPERT, TRUE)
 				l_hand = /obj/item/rogueweapon/whip
+			if ("Cudgel")
+				H.adjust_skillrank_up_to(/datum/skill/combat/maces, SKILL_LEVEL_EXPERT, TRUE)
+				l_hand = /obj/item/rogueweapon/mace/cudgel
 		switch(specialization_choice)
 			if("Fleet-Footed")
 				H.adjust_skillrank_up_to(/datum/skill/misc/sneaking, SKILL_LEVEL_LEGENDARY, TRUE)
