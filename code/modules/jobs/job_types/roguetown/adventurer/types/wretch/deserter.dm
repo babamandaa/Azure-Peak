@@ -75,14 +75,14 @@
 				beltr = /obj/item/rogueweapon/scabbard/sword
 				r_hand = /obj/item/rogueweapon/sword/long
 				backr = /obj/item/rogueweapon/shield/tower/metal
-			if("Mace + Shield")
+			if("Flanged Mace + Shield") //flail is just better anyways, might as well give em something fun
 				beltr = /obj/item/rogueweapon/mace/steel
 				backr = /obj/item/rogueweapon/shield/tower/metal
 			if("Flail + Shield")
-				beltr = /obj/item/rogueweapon/flail/sflail
+				beltr = /obj/item/rogueweapon/mace/cudgel/flanged
 				backr = /obj/item/rogueweapon/shield/tower/metal
-			if("Lucerne")
-				r_hand = /obj/item/rogueweapon/eaglebeak/lucerne
+			if("Eagle's Beak")
+				r_hand = /obj/item/rogueweapon/eaglebeak //eaglebeak got powercrept, probably fine
 				backr = /obj/item/rogueweapon/scabbard/gwstrap
 			if("Battle Axe")
 				backr = /obj/item/rogueweapon/stoneaxe/battle
@@ -94,7 +94,7 @@
 				beltr = /obj/item/rogueweapon/scabbard/sword
 			if("Ssangsudo")
 				r_hand = /obj/item/rogueweapon/sword/long/kriegmesser/ssangsudo
-				beltr = /obj/item/rogueweapon/scabbard/sword/kazengun/noparry
+				beltr = /obj/item/rogueweapon/scabbard/sword/kazengun/noparry //can be swapped to the parry scabbard after the bug fix
 			if("Shashka + Shield")
 				r_hand = /obj/item/rogueweapon/sword/sabre/steppesman
 				beltr = /obj/item/rogueweapon/scabbard/sword
@@ -197,7 +197,7 @@
 		H.set_blindness(0)
 		switch(weapon_choice)
 			if("Warhammer & Shield")
-				beltr = /obj/item/rogueweapon/mace/warhammer
+				beltr = /obj/item/rogueweapon/mace/warhammer/steel
 				backl = /obj/item/rogueweapon/shield/iron
 			if("Sabre & Shield")
 				beltr = /obj/item/rogueweapon/scabbard/sword
