@@ -8,9 +8,10 @@
 	category_tags = list(CTAG_WRETCH)
 	traits_applied = list(TRAIT_MEDIUMARMOR, TRAIT_ALCHEMY_EXPERT, TRAIT_EXPLOSIVE_SUPPLY)
 	subclass_stats = list(
-		STATKEY_WIL = 3,
-		STATKEY_CON = 3,
+		STATKEY_WIL = 2,
+		STATKEY_CON = 2,
 		STATKEY_INT = 3
+		STATKEY_PER = 2 //they get bows and crossbows and i think it's nice if they get a lil perception to use em, taken from wil/con
 	)
 	subclass_skills = list(
 		/datum/skill/combat/bows = SKILL_LEVEL_APPRENTICE,
