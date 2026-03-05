@@ -180,13 +180,15 @@
 					armor = /obj/item/clothing/suit/roguetown/armor/basiceast
 			H.adjust_skillrank_up_to(/datum/skill/combat/polearms, SKILL_LEVEL_EXPERT, TRUE)
 		if("macebearer")
-			var/mace_weapons = list("Steel Mace", "Steel Warhammer")
+			var/mace_weapons = list("Steel Mace", "Steel Warhammer", "Flanged Mace")
 			var/mace_choice = input(H, "Choose your weapon.", "TAKE UP ARMS") as anything in mace_weapons
 			switch(mace_choice)
 				if("Steel Mace")
 					r_hand = /obj/item/rogueweapon/mace/steel
 				if("Steel Warhammer")
 					r_hand = /obj/item/rogueweapon/mace/warhammer/steel
+				if("Flanged Mace")
+					r_hand = /obj/item/rogueweapon/mace/cudgel/flanged
 			H.adjust_skillrank_up_to(/datum/skill/combat/maces, SKILL_LEVEL_EXPERT, TRUE)
 
 	H.cmode_music = 'sound/music/combat_heretic.ogg'
