@@ -59,7 +59,7 @@
 				if(HAS_TRAIT(H, TRAIT_PSYDONIAN_GRIT))
 					beltr = /obj/item/rogueweapon/mace/goden/psymace
 				else
-					beltr = /obj/item/rogueweapon/mace/steel
+					beltr = /obj/item/rogueweapon/mace/cudgel/flanged
 			if("Flail")
 				H.adjust_skillrank_up_to(/datum/skill/combat/whipsflails, SKILL_LEVEL_EXPERT, TRUE)
 				if(HAS_TRAIT(H, TRAIT_PSYDONIAN_GRIT))
