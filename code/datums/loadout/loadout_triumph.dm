@@ -9,22 +9,24 @@
 // -3 TRI Minisection.
 // Nearly all characters can comfortably earn +3-5 TRI per week, assuming they sleep ever-so-often.
 
+// UPDATE: Lowering the cost of a lot of these so that they're used more often. People want their character slots to be consistent; it shouldn't be a choice of "Can I afford to take this round after round", it should be a choice of "Which ones?"
+
 /datum/loadout_item/triumph_knife
 	name = "Laborer's Knife"
 	path = /obj/item/rogueweapon/huntingknife/throwingknife/triumph
-	triumph_cost = 3
+	triumph_cost = 2
 	sort_category = "Triumphs"
 
-/datum/loadout_item/triumph_heavygloves
+// /datum/loadout_item/triumph_heavygloves
 	name = "Heavy Leather Gloves"
 	path = /obj/item/clothing/gloves/roguetown/angle
-	triumph_cost = 3
+	triumph_cost = 2
 	sort_category = "Triumphs"
 
-/datum/loadout_item/triumph_heavyboots
+// /datum/loadout_item/triumph_heavyboots
 	name = "Heavy Leather Boots"
 	path = /obj/item/clothing/shoes/roguetown/boots/leather/reinforced
-	triumph_cost = 3
+	triumph_cost = 2
 	sort_category = "Triumphs"
 
 /datum/loadout_item/triumph_necklace
