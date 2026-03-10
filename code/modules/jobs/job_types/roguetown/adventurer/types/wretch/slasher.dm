@@ -4,7 +4,7 @@
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_ALL_KINDS
 	outfit = /datum/outfit/job/roguetown/wretch/slasher
-	cmode_music = 'sound/music/cmode/antag/combat_ozium.ogg'
+	cmode_music = 'sound/music/combat_ozium.ogg'
 	class_select_category = CLASS_CAT_ACCURSED
 	category_tags = list(CTAG_WRETCH)
 	traits_applied = list(TRAIT_PSYCHOSIS, TRAIT_BLOOD_RESISTANCE) //they'll choose their defense skill later
