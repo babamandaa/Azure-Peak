@@ -9,7 +9,7 @@
 	category_tags = list(CTAG_WRETCH)
 	traits_applied = list(TRAIT_PSYCHOSIS, TRAIT_BLOOD_RESISTANCE) //they'll choose their defense skill later
 	maximum_possible_slots = 2 //might reduce to 1, crit resist makes a big flare. 
-	extra_context = "Monsters come in all shapes and sizes - some of them are quick"
+	extra_context = "Monsters come in all shapes and sizes - some of them are quick, slinking through the shadows to find their next prey, and some of them are crazy, enduring terrifying amounts of damage in the pursuit of satisfying their bloodlust. What kind of monster are you?"
 	subclass_stats = list(
 		STATKEY_STR = 1,
 		STATKEY_WIL = 1,
