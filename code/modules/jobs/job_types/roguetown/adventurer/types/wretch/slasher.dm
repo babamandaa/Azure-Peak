@@ -56,7 +56,7 @@
 	if(H.mind)
 		var/weapons = list("Kriegsmesser", "Flanged Mace + Shield", "Seax + 1 Wrestling", "Axe")
 		var/weapon_choice = input(H, "Do you like hurting other people?", "TAKE UP ARMS") as anything in weapons
-		var/specialization = list("Quick (Dodge Expert, Sneaking, +2 SPD, +2 WIL", "Crazy (Critical Resilience, No Pain Stun, +2 STR)") //thank you outlaw coders i love you mwah
+		var/specialization = list("Quick (Dodge Expert, Sneaking, +2 SPD, +2 WIL)", "Crazy (Critical Resilience, No Pain Stun, +2 STR)") //thank you outlaw coders i love you mwah
 		var/specialization_choice = input(H, "How?", "TAKE UP ARMS") as anything in specialization
 		H.set_blindness(0)
 		switch(weapon_choice)
@@ -74,11 +74,11 @@
 				H.adjust_skillrank_up_to(/datum/skill/combat/wrestling, SKILL_LEVEL_EXPERT, TRUE) //i hope this is okay, the maximum strength they can get is 13 with muscular or thuggish. if this becomes a throat pick nightmare instead of maniac larp i'm gonna be very cross with you all.
 				l_hand = /obj/item/rogueweapon/huntingknife/combat
 				beltl = /obj/item/rogueweapon/scabbard/sheath
-  		if ("Axe") // Jack Torrence
+			if ("Axe") // Jack Torrence
 				H.adjust_skillrank_up_to(/datum/skill/combat/axes, SKILL_LEVEL_EXPERT, TRUE)
 				l_hand = /obj/item/rogueweapon/stoneaxe/woodcut/steel
 		switch(specialization_choice)
-			if("Quick (Dodge Expert, Sneaking, +2 SPD, +2 WIL")
+			if("Quick (Dodge Expert, Sneaking, +2 SPD, +2 WIL)")
 				H.adjust_skillrank_up_to(/datum/skill/misc/sneaking, SKILL_LEVEL_MASTER, TRUE)
 				ADD_TRAIT(H, TRAIT_LIGHT_STEP, TRAIT_GENERIC)
         		ADD_TRAIT(H, TRAIT_DODGE_EXPERT, TRAIT_GENERIC)
@@ -86,5 +86,5 @@
 			if("Crazy (Critical Resilience, No Pain Stun, +2 STR)")
 				ADD_TRAIT(H, TRAIT_CRITICAL_RESISTANCE, TRAIT_GENERIC)
         		ADD_TRAIT(H, TRAIT_NOPAINSTUN, TRAIT_GENERIC)
-        		H.change_stat(STATKEY_STR, 2) // 3 / 0 / -1 / 0 / 2 / 1. 8 weight. Sort of Berserker-y, but with different flavor and weapon options.
+				H.change_stat(STATKEY_STR, 2) // 3 / 0 / -1 / 0 / 2 / 1. 8 weight. Sort of Berserker-y, but with different flavor and weapon options.
 		wretch_select_bounty(H)
