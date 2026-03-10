@@ -4,15 +4,15 @@
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_ALL_KINDS
 	outfit = /datum/outfit/job/roguetown/wretch/slasher
-	cmode_music = 'sound/music/cmode/antag/combat_cutpurse.ogg'
+	cmode_music = 'sound/music/cmode/antag/combat_ozium.ogg'
 	class_select_category = CLASS_CAT_ACCURSED
 	category_tags = list(CTAG_WRETCH)
 	traits_applied = list(TRAIT_PSYCHOSIS, TRAIT_BLOOD_RESISTANCE) //they'll choose their defense skill later
   maximum_possible_slots = 2 //might reduce to 1, crit resist makes a big flare. 
 	extra_context = "Monsters come in all shapes and sizes - some of them are quick"
 	subclass_stats = list(
-		STATKEY_STR = 1,
-		STATKEY_WIL = 1,
+	STATKEY_STR = 1,
+	STATKEY_WIL = 1,
     STATKEY_SPD = 1,
     STATKEY_INT = -1 //4 stat weight, gain more or exchange them for traits later. 1 / 0 / -1 / 0 / 1 / 1 to start
 	)
@@ -25,7 +25,7 @@
 		/datum/skill/combat/unarmed = SKILL_LEVEL_JOURNEYMAN,
 		/datum/skill/misc/athletics = SKILL_LEVEL_MASTER, //you can run
   	/datum/skill/misc/tracking = SKILL_LEVEL_MASTER, //but you can't hide.
-		/datum/skill/misc/climbing = SKILL_LEVEL_EXPERT
+		/datum/skill/misc/climbing = SKILL_LEVEL_EXPERT,
 		/datum/skill/misc/reading = SKILL_LEVEL_NOVICE,
 		/datum/skill/misc/sneaking = SKILL_LEVEL_JOURNEYMAN, //LOOK BEHIND YOU!!
 	)
@@ -85,6 +85,6 @@
         H.change_stat(STATKEY_SPD, 2) // 1 / 0 / -1 / 0 / 3 / 3. 10 weight. A more brutal outlaw - roughly a Marauder analogue, if you want to go there. Gets one extra stat point, because every other "Fast" wretch either gets amazing ranged options or holy.
 			if("Crazy (Critical Resilience, No Pain Stun, +2 STR)")
 				ADD_TRAIT(H, TRAIT_CRITICAL_RESISTANCE, TRAIT_GENERIC)
-        ADD_TRAIT(H, TRAIT_NOPAINSTUN, TRAIT_GENERIC)
+        		ADD_TRAIT(H, TRAIT_NOPAINSTUN, TRAIT_GENERIC)
         H.change_stat(STATKEY_STR, 2) // 3 / 0 / -1 / 0 / 2 / 1. 8 weight. Sort of Berserker-y, but with different flavor and weapon options.
 		wretch_select_bounty(H)
