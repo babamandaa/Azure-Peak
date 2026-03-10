@@ -11,10 +11,10 @@
   	maximum_possible_slots = 2 //might reduce to 1, crit resist makes a big flare. 
 	extra_context = "Monsters come in all shapes and sizes - some of them are quick"
 	subclass_stats = list(
-	STATKEY_STR = 1,
-	STATKEY_WIL = 1,
-    STATKEY_SPD = 1,
-    STATKEY_INT = -1 //4 stat weight, gain more or exchange them for traits later. 1 / 0 / -1 / 0 / 1 / 1 to start
+		STATKEY_STR = 1,
+		STATKEY_WIL = 1,
+    	STATKEY_SPD = 1,
+    	STATKEY_INT = -1 //4 stat weight, gain more or exchange them for traits later. 1 / 0 / -1 / 0 / 1 / 1 to start
 	)
 	subclass_skills = list(
 		/datum/skill/combat/knives = SKILL_LEVEL_JOURNEYMAN,
@@ -24,7 +24,7 @@
 		/datum/skill/combat/wrestling = SKILL_LEVEL_JOURNEYMAN,
 		/datum/skill/combat/unarmed = SKILL_LEVEL_JOURNEYMAN,
 		/datum/skill/misc/athletics = SKILL_LEVEL_MASTER, //you can run
-  	/datum/skill/misc/tracking = SKILL_LEVEL_MASTER, //but you can't hide.
+  		/datum/skill/misc/tracking = SKILL_LEVEL_MASTER, //but you can't hide.
 		/datum/skill/misc/climbing = SKILL_LEVEL_EXPERT,
 		/datum/skill/misc/reading = SKILL_LEVEL_NOVICE,
 		/datum/skill/misc/sneaking = SKILL_LEVEL_JOURNEYMAN, //LOOK BEHIND YOU!!
@@ -65,15 +65,15 @@
 				beltl = /obj/item/rogueweapon/scabbard/sword
 				l_hand = /obj/item/rogueweapon/sword/long/kriegmesser
 			if("Flanged Mace + Shield") // Jacket
-        H.adjust_skillrank_up_to(/datum/skill/combat/maces, SKILL_LEVEL_EXPERT, TRUE)
-        H.adjust_skillrank_up_to(/datum/skill/combat/shields, SKILL_LEVEL_JOURNEYMAN, TRUE)
+       			H.adjust_skillrank_up_to(/datum/skill/combat/maces, SKILL_LEVEL_EXPERT, TRUE)
+    			H.adjust_skillrank_up_to(/datum/skill/combat/shields, SKILL_LEVEL_JOURNEYMAN, TRUE)
 				backr = /obj/item/rogueweapon/shield/tower
 				r_hand = /obj/item/rogueweapon/mace/cudgel/flanged
 			if ("Seax + 1 Wrestling") // Ghostface
 				H.adjust_skillrank_up_to(/datum/skill/combat/knives, SKILL_LEVEL_EXPERT, TRUE)
-        H.adjust_skillrank_up_to(/datum/skill/combat/wrestling, SKILL_LEVEL_EXPERT, TRUE) //i hope this is okay, the maximum strength they can get is 13 with muscular or thuggish. if this becomes a throat pick nightmare instead of maniac larp i'm gonna be very cross with you all.
+        		H.adjust_skillrank_up_to(/datum/skill/combat/wrestling, SKILL_LEVEL_EXPERT, TRUE) //i hope this is okay, the maximum strength they can get is 13 with muscular or thuggish. if this becomes a throat pick nightmare instead of maniac larp i'm gonna be very cross with you all.
 				l_hand = /obj/item/rogueweapon/huntingknife/combat
-        beltl = /obj/item/rogueweapon/scabbard/sheath
+        		beltl = /obj/item/rogueweapon/scabbard/sheath
   		if ("Axe") // Jack Torrence
 				H.adjust_skillrank_up_to(/datum/skill/combat/axes, SKILL_LEVEL_EXPERT, TRUE)
 				l_hand = /obj/item/rogueweapon/stoneaxe/woodcut/steel
@@ -81,10 +81,10 @@
 			if("Quick (Dodge Expert, Sneaking, +2 SPD, +2 WIL")
 				H.adjust_skillrank_up_to(/datum/skill/misc/sneaking, SKILL_LEVEL_MASTER, TRUE)
 				ADD_TRAIT(H, TRAIT_LIGHT_STEP, TRAIT_GENERIC)
-        ADD_TRAIT(H, TRAIT_DODGE_EXPERT, TRAIT_GENERIC)
-        H.change_stat(STATKEY_SPD, 2) // 1 / 0 / -1 / 0 / 3 / 3. 10 weight. A more brutal outlaw - roughly a Marauder analogue, if you want to go there. Gets one extra stat point, because every other "Fast" wretch either gets amazing ranged options or holy.
+        		ADD_TRAIT(H, TRAIT_DODGE_EXPERT, TRAIT_GENERIC)
+        		H.change_stat(STATKEY_SPD, 2) // 1 / 0 / -1 / 0 / 3 / 3. 10 weight. A more brutal outlaw - roughly a Marauder analogue, if you want to go there. Gets one extra stat point, because every other "Fast" wretch either gets amazing ranged options or holy.
 			if("Crazy (Critical Resilience, No Pain Stun, +2 STR)")
 				ADD_TRAIT(H, TRAIT_CRITICAL_RESISTANCE, TRAIT_GENERIC)
         		ADD_TRAIT(H, TRAIT_NOPAINSTUN, TRAIT_GENERIC)
-        H.change_stat(STATKEY_STR, 2) // 3 / 0 / -1 / 0 / 2 / 1. 8 weight. Sort of Berserker-y, but with different flavor and weapon options.
+        		H.change_stat(STATKEY_STR, 2) // 3 / 0 / -1 / 0 / 2 / 1. 8 weight. Sort of Berserker-y, but with different flavor and weapon options.
 		wretch_select_bounty(H)
