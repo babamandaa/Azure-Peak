@@ -81,10 +81,10 @@
 			if("Quick (Dodge Expert, Sneaking, +2 SPD, +2 WIL)")
 				H.adjust_skillrank_up_to(/datum/skill/misc/sneaking, SKILL_LEVEL_MASTER, TRUE)
 				ADD_TRAIT(H, TRAIT_LIGHT_STEP, TRAIT_GENERIC)
-        		ADD_TRAIT(H, TRAIT_DODGE_EXPERT, TRAIT_GENERIC)
-        		H.change_stat(STATKEY_SPD, 2) // 1 / 0 / -1 / 0 / 3 / 3. 10 weight. A more brutal outlaw - roughly a Marauder analogue, if you want to go there. Gets one extra stat point, because every other "Fast" wretch either gets amazing ranged options or holy.
+				ADD_TRAIT(H, TRAIT_DODGE_EXPERT, TRAIT_GENERIC)
+				H.change_stat(STATKEY_SPD, 2) // 1 / 0 / -1 / 0 / 3 / 3. 10 weight. A more brutal outlaw - roughly a Marauder analogue, if you want to go there. Gets one extra stat point, because every other "Fast" wretch either gets amazing ranged options or holy.
 			if("Crazy (Critical Resilience, No Pain Stun, +2 STR)")
 				ADD_TRAIT(H, TRAIT_CRITICAL_RESISTANCE, TRAIT_GENERIC)
-        		ADD_TRAIT(H, TRAIT_NOPAINSTUN, TRAIT_GENERIC)
+				ADD_TRAIT(H, TRAIT_NOPAINSTUN, TRAIT_GENERIC)
 				H.change_stat(STATKEY_STR, 2) // 3 / 0 / -1 / 0 / 2 / 1. 8 weight. Sort of Berserker-y, but with different flavor and weapon options.
 		wretch_select_bounty(H)
