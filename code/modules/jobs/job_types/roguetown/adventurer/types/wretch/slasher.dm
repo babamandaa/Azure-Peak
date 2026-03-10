@@ -8,7 +8,7 @@
 	class_select_category = CLASS_CAT_ACCURSED
 	category_tags = list(CTAG_WRETCH)
 	traits_applied = list(TRAIT_PSYCHOSIS, TRAIT_BLOOD_RESISTANCE) //they'll choose their defense skill later
-  	maximum_possible_slots = 2 //might reduce to 1, crit resist makes a big flare. 
+	maximum_possible_slots = 2 //might reduce to 1, crit resist makes a big flare. 
 	extra_context = "Monsters come in all shapes and sizes - some of them are quick"
 	subclass_stats = list(
 		STATKEY_STR = 1,
@@ -65,15 +65,15 @@
 				beltl = /obj/item/rogueweapon/scabbard/sword
 				l_hand = /obj/item/rogueweapon/sword/long/kriegmesser
 			if("Flanged Mace + Shield") // Jacket
-       			H.adjust_skillrank_up_to(/datum/skill/combat/maces, SKILL_LEVEL_EXPERT, TRUE)
-    			H.adjust_skillrank_up_to(/datum/skill/combat/shields, SKILL_LEVEL_JOURNEYMAN, TRUE)
+				H.adjust_skillrank_up_to(/datum/skill/combat/maces, SKILL_LEVEL_EXPERT, TRUE)
+				H.adjust_skillrank_up_to(/datum/skill/combat/shields, SKILL_LEVEL_JOURNEYMAN, TRUE)
 				backr = /obj/item/rogueweapon/shield/tower
 				r_hand = /obj/item/rogueweapon/mace/cudgel/flanged
 			if ("Seax + 1 Wrestling") // Ghostface
 				H.adjust_skillrank_up_to(/datum/skill/combat/knives, SKILL_LEVEL_EXPERT, TRUE)
-        		H.adjust_skillrank_up_to(/datum/skill/combat/wrestling, SKILL_LEVEL_EXPERT, TRUE) //i hope this is okay, the maximum strength they can get is 13 with muscular or thuggish. if this becomes a throat pick nightmare instead of maniac larp i'm gonna be very cross with you all.
+				H.adjust_skillrank_up_to(/datum/skill/combat/wrestling, SKILL_LEVEL_EXPERT, TRUE) //i hope this is okay, the maximum strength they can get is 13 with muscular or thuggish. if this becomes a throat pick nightmare instead of maniac larp i'm gonna be very cross with you all.
 				l_hand = /obj/item/rogueweapon/huntingknife/combat
-        		beltl = /obj/item/rogueweapon/scabbard/sheath
+				beltl = /obj/item/rogueweapon/scabbard/sheath
   		if ("Axe") // Jack Torrence
 				H.adjust_skillrank_up_to(/datum/skill/combat/axes, SKILL_LEVEL_EXPERT, TRUE)
 				l_hand = /obj/item/rogueweapon/stoneaxe/woodcut/steel
