@@ -8,7 +8,7 @@
 	class_select_category = CLASS_CAT_ACCURSED
 	category_tags = list(CTAG_WRETCH)
 	traits_applied = list(TRAIT_PSYCHOSIS, TRAIT_BLOOD_RESISTANCE) //they'll choose their defense skill later
-  maximum_possible_slots = 2 //might reduce to 1, crit resist makes a big flare. 
+  	maximum_possible_slots = 2 //might reduce to 1, crit resist makes a big flare. 
 	extra_context = "Monsters come in all shapes and sizes - some of them are quick"
 	subclass_stats = list(
 	STATKEY_STR = 1,
