@@ -252,11 +252,16 @@
 				if(istype(user.rmb_intent, /datum/rmb_intent/strong))
 					sharp_loss += STRONG_SHP_BONUS
 					intdam += STRONG_INTG_BONUS
-          
+
+				// Heavy weapons chew through shields — use higher of demolition_mod or intent intdamage_factor
+				if(istype(used_weapon, /obj/item/rogueweapon/shield) && intenty)
+					var/shield_mult = max(intenty.demolition_mod, intenty.intent_intdamage_factor)
+					intdam *= shield_mult
+
 				var/tempobonus = H.get_tempo_bonus(TEMPO_TAG_DEF_INTEGFACTOR)
 				if(tempobonus)	//It is either null or 0.1 to 1, multiplication by null results in 0, so we check.
 					intdam *= tempobonus
-         
+
 				used_weapon.take_damage(intdam, BRUTE, used_weapon.d_type)
 				used_weapon.remove_bintegrity(sharp_loss, user)
 			return TRUE
@@ -307,9 +312,10 @@
 			to_chat(user, span_boldwarning(def_msg))
 
 			for(var/mob/living/L in get_hearers_in_view(4, src, RECURSIVE_CONTENTS_CLIENT_MOBS))
-				if(L.has_flaw(/datum/charflaw/addiction/clamorous))
-					if(prob(7 + (L.STALUC - 10)))
-						L.sate_addiction()
+				if(!L.has_flaw(/datum/charflaw/addiction/clamorous))
+					continue
+				if(prob(7 + (L.STALUC - 10)))
+					L.sate_addiction(/datum/charflaw/addiction/clamorous)
 
 			if(!iscarbon(user))	//Non-carbon mobs never make it to the proper parry proc where the other calculations are done.
 				if(W.max_blade_int)

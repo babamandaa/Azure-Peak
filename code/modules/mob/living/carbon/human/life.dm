@@ -55,7 +55,6 @@
 				remove_stress(/datum/stressevent/sleepytime)
 				if(mind)
 					mind.sleep_adv.advance_cycle()
-					handle_sleep_triumphs()
 	if(leprosy == 1)
 		adjustToxLoss(2)
 	else if(leprosy == 2)
@@ -72,8 +71,9 @@
 	handle_heart()
 	update_energy()
 	update_stamina()
-	if(charflaw && !charflaw.ephemeral && mind)
-		charflaw.flaw_on_life(src)
+	for(var/datum/charflaw/cf in charflaws)
+		if(!cf.ephemeral && mind)
+			cf.flaw_on_life(src)
 	if(health <= 0)
 		adjustOxyLoss(0.5)
 	if(mode == NPC_AI_OFF && !client && !HAS_TRAIT(src, TRAIT_NOSLEEP))
@@ -113,7 +113,6 @@
 
 	. = ..()
 	name = get_visible_name()
-
 /mob/living/carbon/human/proc/on_daypass()
 	if(dna?.species)
 		if(STUBBLE in dna.species.species_traits)

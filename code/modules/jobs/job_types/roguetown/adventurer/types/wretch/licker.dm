@@ -4,6 +4,7 @@
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_NO_CONSTRUCT
 	outfit = /datum/outfit/job/roguetown/wretch/licker
+	class_select_category = CLASS_CAT_ACCURSED
 	category_tags = list(CTAG_WRETCH)
 	traits_applied = list(
 		TRAIT_STEELHEARTED,
@@ -26,6 +27,7 @@
 		H.adjust_skillrank_up_to(/datum/skill/magic/blood, 4, TRUE)
 		var/datum/antagonist/vampire/new_antag = new /datum/antagonist/vampire(generation = GENERATION_NEONATE)
 		H.mind.add_antag_datum(new_antag)
+		H.apply_status_effect(STATUS_EFFECT_VAMPIRE_SPAWN_PROTECTION)
 		REMOVE_TRAIT(H, TRAIT_OUTLAW, JOB_TRAIT)
 		if(HAS_TRAIT(H, TRAIT_CRITICAL_RESISTANCE))
 			REMOVE_TRAIT(H, TRAIT_CRITICAL_RESISTANCE, null)
@@ -70,7 +72,6 @@
 
 /datum/reagent/vampsolution/on_mob_metabolize(mob/living/M, mob/living/S)
 	M.overlay_fullscreen("druqk", /atom/movable/screen/fullscreen/druqks)
-	M.update_body_parts_head_only()
 	if(M.client)
 		ADD_TRAIT(M, TRAIT_DRUQK, "based")
 		SSdroning.area_entered(get_area(M), M.client)
@@ -82,4 +83,3 @@
 	if(M.client)
 		REMOVE_TRAIT(M, TRAIT_DRUQK, "based")
 		SSdroning.play_area_sound(get_area(M), M.client)
-	M.update_body_parts_head_only()

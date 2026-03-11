@@ -24,7 +24,7 @@ GLOBAL_LIST_INIT(dwarfskeleton_aggro, world.file2list("strings/rt/dskeletonaggro
 /mob/living/carbon/human/species/dwarfskeleton/retaliate(mob/living/L)
 	.=..()
 	if(prob(5))
-		say(pick(GLOB.dwarfskeleton_aggro))
+		say(pick(GLOB.dwarfskeleton_aggro), npc_speech = TRUE)
 		pointed(target)
 
 /mob/living/carbon/human/species/dwarfskeleton/Initialize()
@@ -38,8 +38,9 @@ GLOBAL_LIST_INIT(dwarfskeleton_aggro, world.file2list("strings/rt/dskeletonaggro
 	if(src.dna && src.dna.species)
 		src.dna.species.species_traits |= NOBLOOD
 		src.dna.species.soundpack_m = new /datum/voicepack/skeleton()
-	if(src.charflaw)
-		QDEL_NULL(src.charflaw)
+	for(var/datum/charflaw/cf in charflaws)
+		charflaws.Remove(cf)
+		QDEL_NULL(cf)
 	mob_biotypes = MOB_UNDEAD
 	job = "Dwarf Skeleton"
 	real_name = "Dwarven Skeleton"

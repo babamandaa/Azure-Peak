@@ -498,7 +498,7 @@
 	desc = "Shovels have always held some manner of importance in a militiaman's lyfe. Instead of digging corpsepits, however, this poleaxe will now fill them up."
 	icon_state = "peasantwaraxe"
 	possible_item_intents = list(/datum/intent/axe/cut, /datum/intent/axe/chop, SPEAR_BASH) //bash is for nonlethal takedowns, only targets limbs
-	gripped_intents = list(/datum/intent/rend/reach, /datum/intent/axe/chop/battle/greataxe, /datum/intent/sword/peel/big, SPEAR_BASH)
+	gripped_intents = list(/datum/intent/rend/reach, /datum/intent/axe/chop/long, /datum/intent/sword/peel/big, SPEAR_BASH)
 	force = 15
 	force_wielded = 25
 	minstr = 10
@@ -513,7 +513,7 @@
 	desc = "'Do you think Psydon stays in Heaven because He too lives in fear of what He's created?' </br>A silver shovel, improvised - perhaps, by the hands of a particularly desperate gravedigger - to fill a polearm's duty."
 	icon_state = "silvershovelwaraxe"
 	possible_item_intents = list(/datum/intent/axe/cut, /datum/intent/axe/chop, SPEAR_BASH) //bash is for nonlethal takedowns, only targets limbs
-	gripped_intents = list(/datum/intent/rend/reach, /datum/intent/axe/chop/battle/greataxe, /datum/intent/sword/peel/big, SPEAR_BASH)
+	gripped_intents = list(/datum/intent/rend/reach, /datum/intent/axe/chop/long, /datum/intent/sword/peel/big, SPEAR_BASH)
 	force = 15
 	force_wielded = 25
 	minstr = 11
@@ -777,6 +777,7 @@
 	desc = "Fittingly coined as a 'peasant's falchion', this hunting sword's blade has been retempered to hunt the most dangerous game. Those jagged edges are perfect for tearing into flesh-and-maille."
 	possible_item_intents = list(/datum/intent/sword/cut, /datum/intent/sword/strike)
 	icon_state = "maciejowski"
+	sheathe_icon = "maciejowski"
 	gripped_intents = list(/datum/intent/rend, /datum/intent/sword/chop/militia, /datum/intent/sword/peel, /datum/intent/sword/strike)
 	force = 18
 	force_wielded = 25
@@ -890,7 +891,7 @@
 /datum/intent/claw/lunge/gronn
 	damfactor = 1.1
 	swingdelay = 5
-	clickcd = 10
+	clickcd = CLICK_CD_QUICK
 	penfactor = 45
 
 /datum/intent/claw/cut
@@ -936,6 +937,7 @@
 	item_d_type = "slash"
 	misscost = 10
 	intent_intdamage_factor = 0.05
+	demolition_mod = 0.05
 
 /datum/intent/claw/rend/steel
 	damfactor = 3
@@ -944,15 +946,16 @@
 	name = "peculate"
 	hitsound = null
 	desc = "Thieve the appearance of another."
-	icon_state = "peculate"
+	icon_state = "inpeculate"
 
 //Unique assassin/antag dagger.
 /obj/item/rogueweapon/huntingknife/idagger/steel/profane
 	name = "profane dagger"
-	desc = "A profane dagger made of cursed black steel. Whispers emanate from the gem on its hilt."
-	possible_item_intents = list(/datum/intent/dagger/cut, /datum/intent/dagger/thrust, /datum/intent/peculate)
+	desc = "A profane dagger made from a cursed alloy. Whispers emanate from the diamond on its hilt. </br>A chill rolls down my spine. I am not alone."
+	possible_item_intents = list(/datum/intent/dagger/cut, /datum/intent/dagger/thrust, /datum/intent/peculate, /datum/intent/dagger/thrust/pick)
 	sellprice = 250
-	icon_state = "pdagger"
+	icon_state = "graggardagger"
+	sheathe_icon = "graggardagger"
 	embedding = list("embed_chance" = 0) // Embedding the cursed dagger has the potential to cause duping issues. Keep it like this unless you want to do a lot of bug hunting.
 	resistance_flags = INDESTRUCTIBLE
 	stealthy_audio = TRUE

@@ -15,6 +15,12 @@
 	ckeywhitelist = list("cheekycrenando")
 	sort_category = "Donator"
 
+/datum/loadout_item/donator_funky
+	name = "Trimmed down padded dress"
+	path = /obj/item/clothing/suit/roguetown/shirt/dress/funkydress
+	ckeywhitelist = list("funke-monke")
+	sort_category = "Donator"
+
 /datum/loadout_item/donator_strudel1
 	name = "Donator Kit - Grenzelhoftian Mage Vest"
 	path = /obj/item/enchantingkit/strudel1
@@ -87,12 +93,11 @@
 	ckeywhitelist = list("eirenxiv")
 	sort_category = "Donator"
 
-/*	Swapped out for _eiren4
 /datum/loadout_item/donator_eiren3
 	name = "Donator Kit - Cinis"
 	path = /obj/item/enchantingkit/eirensabre2
 	ckeywhitelist = list("eirenxiv")
-*/
+	sort_category = "Donator"
 
 /datum/loadout_item/donator_eiren4
 	name = "Donator Kit - Darkwood's Embrace"
@@ -103,6 +108,12 @@
 /datum/loadout_item/donator_waff
 	name = "Donator Kit - Weeper's Lathe"
 	path = /obj/item/enchantingkit/waff
+	ckeywhitelist = list("waffai")
+	sort_category = "Donator"
+
+/datum/loadout_item/donator_waff2
+	name = "Donator Item - Graverobber's Hat"
+	path = /obj/item/clothing/head/roguetown/duelhat/pretzel
 	ckeywhitelist = list("waffai")
 	sort_category = "Donator"
 
@@ -196,4 +207,10 @@
 	name = "Donator Kit - Pike"
 	path = /obj/item/enchantingkit/stinketh_pike
 	ckeywhitelist = list("stinkethstonketh")
+	sort_category = "Donator"
+
+/datum/loadout_item/donator_drd/lsword
+	name = "Donator Kit - Ornate Longsword"
+	path = /obj/item/enchantingkit/drd_lsword
+	ckeywhitelist = list("drd2021")
 	sort_category = "Donator"

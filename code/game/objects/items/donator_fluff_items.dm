@@ -25,6 +25,17 @@
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
 
+//Funkymonke's donator item - dress
+/obj/item/clothing/suit/roguetown/shirt/dress/funkydress
+	name = "padded dress"
+	desc = "A trimmed down version of a would be protective dress."
+	slot_flags = ITEM_SLOT_SHIRT|ITEM_SLOT_ARMOR
+	icon_state = "funkydress"
+	sleevetype = "funkydress"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
+
 //Strudles donator item - mage vest (same as robes) and xylix tabard
 /obj/item/clothing/suit/roguetown/shirt/robe/sofiavest
 	name = "grenzelhoftian mages vest"
@@ -150,7 +161,6 @@
 	icon_state = "eiren"
 	icon = 'icons/obj/items/donor_weapons_64.dmi'
 
-
 /obj/item/rogueweapon/sword/sabre/eiren
 	name = "Lunae"
 	desc = "Two blades, one forged in Noc's light, a soothing breath of clarity. Here, and here alone, were moon and fire ever together."
@@ -193,15 +203,38 @@
 			pic.color = get_detail_color()
 		add_overlay(pic)
 
-//pretzel's special sword
+//pretzel's special things
 /obj/item/rogueweapon/greatsword/weeperslathe
 	name = "Weeper's Lathe"
 	desc = "A recreation of a gilbronze greatsword, wrought in steel. Inscribed on the blade is a declaration: \"I HAVE ONLY A SHORT TYME TO LYVE, BUT I AM NOT AFRAID TO DIE.\""
 	icon_state = "weeperslathe"
 	icon = 'icons/obj/items/donor_weapons_64.dmi'
 
+/obj/item/clothing/head/roguetown/duelhat/pretzel
+	name = "rethrifted gravedigger's hat" 
+	desc = "A gravetender's dark leather slouch, refitted with a golden dragon-sigil. Who needs a steel skullcap when you have dumb luck? <br> \
+	\"You ever feel like nothin' good was ever gonna happen to you?\" <br> \
+	\"Yeah, and nothin' did. So what?\""
+	color = null
+	icon_state = "pretzel_stolenhat"
+	item_state = "pretzel_stolenhat"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+
 //inverserun's claymore
 /obj/item/rogueweapon/greatsword/zwei/inverserun
+	name = "Votive Thorns"
+	desc = "Promises hurt, but so does plucking rosa. Hoping hurts, but so does looking at the beauty of Astrata's light. Pick yourself back up. Remember your promise, despite the thorns."
+	icon_state = "inverse"
+	icon = 'icons/obj/items/donor_weapons_64.dmi'
+
+/obj/item/rogueweapon/greatsword/inverserun
+	name = "Votive Thorns"
+	desc = "Promises hurt, but so does plucking rosa. Hoping hurts, but so does looking at the beauty of Astrata's light. Pick yourself back up. Remember your promise, despite the thorns."
+	icon_state = "inverse"
+	icon = 'icons/obj/items/donor_weapons_64.dmi'
+
+/obj/item/rogueweapon/greatsword/grenz/flamberge/inverserun
 	name = "Votive Thorns"
 	desc = "Promises hurt, but so does plucking rosa. Hoping hurts, but so does looking at the beauty of Astrata's light. Pick yourself back up. Remember your promise, despite the thorns."
 	icon_state = "inverse"
@@ -331,6 +364,17 @@
 	icon_state = "koruu_naginata"
 	icon = 'icons/obj/items/donor_weapons_64.dmi'
 
+/obj/item/rogueweapon/spear/naginata/koruu/getonmobprop(tag)
+	. = ..()
+	if(tag)
+		switch(tag)
+			if("gen")
+				return list("shrink" = 0.6,"sx" = -7,"sy" = 2,"nx" = 7,"ny" = 3,"wx" = -2,"wy" = 1,"ex" = 1,"ey" = 1,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = -38,"sturn" = 37,"wturn" = 30,"eturn" = -30,"nflip" = 0,"sflip" = 8,"wflip" = 8,"eflip" = 0)
+			if("wielded")
+				return list("shrink" = 0.6,"sx" = 3,"sy" = 4,"nx" = -1,"ny" = 4,"wx" = -8,"wy" = 3,"ex" = 7,"ey" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 15,"nflip" = 8,"sflip" = 0,"wflip" = 8,"eflip" = 0)
+			if("onback")
+				return list("shrink" = 0.5,"sx" = -1,"sy" = 2,"nx" = 0,"ny" = 2,"wx" = 2,"wy" = 1,"ex" = 0,"ey" = 1,"nturn" = 0,"sturn" = 0,"wturn" = 70,"eturn" = 15,"nflip" = 1,"sflip" = 1,"wflip" = 1,"eflip" = 1,"northabove" = 1,"southabove" = 0,"eastabove" = 0,"westabove" = 0)
+
 /obj/item/rogueweapon/halberd/glaive/koruu
 	name = "Sixty Five Yils"
 	desc = "A beautiful guandao forged out of steel and interlocked with blacksteel, much like few blades before. The inscription, 'At fifteen, I went to join the army; only at eighty was I finally able to return home.' is inscribed in gold into the haft of the guandao."
@@ -344,6 +388,23 @@
 	icon_state = "dakken_zizbarb"
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+
+/obj/item/clothing/head/roguetown/helmet/heavy/knight/armet/dakken
+	name = "armoured avantyne barbute"
+	desc = "A heavy-metal barbute that seems to be more avantyne than steel. It carries a tormented lustre about it, glinting under the sun as threads of the dark metal wind through its visor."
+	icon_state = "dakken_zizbarb"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+
+/obj/item/clothing/head/roguetown/helmet/heavy/barbute/visor/dakken
+	name = "armoured avantyne barbute"
+	desc = "A heavy-metal barbute that seems to be more avantyne than steel. It carries a tormented lustre about it, glinting under the sun as threads of the dark metal wind through its visor."
+	icon_state = "dakken_zizbarb"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes64.dmi'
+	worn_x_dimension = 64
+	worn_y_dimension = 64
+	bloody_icon = 'icons/effects/blood64.dmi'
 
 //STINKETHSTONKETH
 /obj/item/rogueweapon/sword/sabre/steppesman/stinketh
@@ -362,4 +423,11 @@
 	name = "Kindness of Ravens Standard"
 	desc = "A Freifechter's steel pike with a reinforced spruce shaft sporting a black banner with a strange blend of religious symbols."
 	icon_state = "stinkethbanner"
+	icon = 'icons/obj/items/donor_weapons_64.dmi'
+
+//DRD21
+/obj/item/rogueweapon/sword/long/drd
+	name = "ornate basket-hilted longsword"
+	desc = "A longsword, fitten with a basket-hilt. The grip is made out of a fine green-stained leather, with a piece of spiral-cared walnut connecting it to a lion-shaped pommel. A purple glowing rune sits atop the blade."
+	icon_state = "drd_lsword"
 	icon = 'icons/obj/items/donor_weapons_64.dmi'

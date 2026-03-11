@@ -142,6 +142,11 @@ GLOBAL_LIST_INIT(burgher_positions, list( //Artisans, store owners what have you
 	"Magicians Associate",
 ))
 
+GLOBAL_LIST_INIT(bathhouse_positions, list(
+	"Bathmaster",
+	"Bathhouse Attendant",
+))
+
 GLOBAL_LIST_INIT(peasant_positions, list( //Serfs / peasants / generic towners
 	"Bathhouse Attendant",
 	"Cook",
@@ -180,25 +185,7 @@ GLOBAL_LIST_INIT(inquisition_positions, list( //Self explanatory
 	"Orthodoxist",
 ))
 
-GLOBAL_LIST_INIT(rogueoverthrow_positions, list( //Used for Aspirant / Peasant Rebellion
-	"Grand Duke",
-	"Consort",
-	"Suitor",
-	"Prince",
-	"Hand",
-	"Steward",
-	"Councillor",
-	"Suitor",
-	"Marshal",
-	"Knight",
-	"Inquisitor",
-	"Absolver",
-	"Orthodoxist",
-	"Assassin",
-	"Bandit",
-	"Wretch",
-	"Gnoll"
-))
+GLOBAL_LIST_INIT(aspirant_eligible_positions, list(ASPIRANT_ELIGIBLE_POSITIONS))
 
 GLOBAL_LIST_INIT(roguewar_positions, list(
 	"Adventurer",
