@@ -14,19 +14,19 @@
 /datum/loadout_item/triumph_knife
 	name = "Laborer's Knife"
 	path = /obj/item/rogueweapon/huntingknife/throwingknife/triumph
-	triumph_cost = 2
+	triumph_cost = 1
 	sort_category = "Triumphs"
 
 // /datum/loadout_item/triumph_heavygloves
 	//name = "Heavy Leather Gloves"
 	//path = /obj/item/clothing/gloves/roguetown/angle
-	//triumph_cost = 2
+	//triumph_cost = 1
 	//sort_category = "Triumphs"
 
 // /datum/loadout_item/triumph_heavyboots
 	//name = "Heavy Leather Boots"
 	//path = /obj/item/clothing/shoes/roguetown/boots/leather/reinforced
-	//triumph_cost = 2
+	//triumph_cost = 1
 	//sort_category = "Triumphs"
 
 /datum/loadout_item/triumph_necklace
@@ -47,12 +47,12 @@
 	triumph_cost = 1
 	sort_category = "Triumphs"
 
-// -3/-2 TRI Minisection. These are all about as powerful as a virtue, or a little bit less. Useful mechanically, but generally you can get these for ~30 mammons.
+// ~3/2 TRI Minisection. These are all about as powerful as a virtue, or a little bit less. Useful mechanically, but generally you can get these for ~30 mammons.
 
 /datum/loadout_item/triumph_shortsatchel
 	name = "Short Satchel"
 	path = /obj/item/storage/backpack/rogue/satchel/short
-	triumph_cost = 3 
+	triumph_cost = 2
 	sort_category = "Triumphs"
 
 /datum/loadout_item/triumph_waterskin
@@ -64,19 +64,19 @@
 /datum/loadout_item/triumph_messkit
 	name = "Mess Kit"
 	path = /obj/item/storage/gadget/messkit
-	triumph_cost = 2 //second breakfast roleplaying is sovl and having plates on you isn't worth 5 triumphs
+	triumph_cost = 1 //second breakfast roleplaying is sovl and having plates on you isn't worth 5 triumphs
 	sort_category = "Triumphs"
 
 /datum/loadout_item/triumph_foldtable
 	name = "Folding Table"
 	path = /obj/item/folding_table_stored
-	triumph_cost = 2
+	triumph_cost = 1
 	sort_category = "Triumphs"
 
 /datum/loadout_item/triumph_bedroll
 	name = "Bedroll"
 	path = /obj/item/bedroll
-	triumph_cost = 2
+	triumph_cost = 1
 	sort_category = "Triumphs"
 
 /datum/loadout_item/triumph_scabbardnoble
@@ -156,49 +156,49 @@
 /datum/loadout_item/triumph_buttpack
 	name = "Belted Satchel"
 	path = /obj/item/storage/backpack/rogue/satchel/beltpack
-	triumph_cost = 4
+	triumph_cost = 2
 	sort_category = "Triumphs"
 
 /datum/loadout_item/triumph_lunchpouch
 	name = "Pouch of Luncheons"
 	path = /obj/item/storage/belt/rogue/pouch/triumphlunch
-	triumph_cost = 4
+	triumph_cost = 2
 	sort_category = "Triumphs"
 
 /datum/loadout_item/triumph_grenzhat
 	name = "Grenzelhoftian Beret"
 	path = /obj/item/clothing/head/roguetown/grenzelhofthat/triumph
-	triumph_cost = 4
+	triumph_cost = 2
 	sort_category = "Triumphs"
 
 /datum/loadout_item/triumph_lordcloak
 	name = "Lordly Cloak"
 	path = /obj/item/clothing/cloak/lordcloak
-	triumph_cost = 3
+	triumph_cost = 2
 	sort_category = "Triumphs"
 
 /datum/loadout_item/triumph_ladycloak
 	name = "Ladylike Cloak"
 	path = /obj/item/clothing/cloak/lordcloak/ladycloak
-	triumph_cost = 3
+	triumph_cost = 2
 	sort_category = "Triumphs"
 
 /datum/loadout_item/triumph_scabbardroyal
 	name = "Decorated Scabbard, Golden"
 	path = /obj/item/rogueweapon/scabbard/sword/royal
-	triumph_cost = 3
+	triumph_cost = 2
 	sort_category = "Triumphs"
 
 /datum/loadout_item/triumph_sheathroyal
 	name = "Decorated Sheath, Golden"
 	path = /obj/item/rogueweapon/scabbard/sheath/royal
-	triumph_cost = 3
+	triumph_cost = 2
 	sort_category = "Triumphs"
 
 /datum/loadout_item/triumph_gdorpelring
 	name = "Golden Dorpel Ring, Ornate"
 	path = /obj/item/clothing/ring/diamond/triumph
-	triumph_cost = 3
+	triumph_cost = 2
 	sort_category = "Triumphs"
 
 // Beyond.
