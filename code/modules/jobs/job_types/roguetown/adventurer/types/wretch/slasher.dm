@@ -7,7 +7,7 @@
 	cmode_music = 'sound/music/combat_ozium.ogg'
 	class_select_category = CLASS_CAT_ACCURSED
 	category_tags = list(CTAG_WRETCH)
-	traits_applied = list(TRAIT_PSYCHOSIS, TRAIT_BLOOD_RESISTANCE) //they'll choose their defense skill later
+	traits_applied = list(TRAIT_PSYCHOSIS, TRAIT_BLOOD_RESISTANCE, TRAIT_DECEIVING_MEEKNESS, TRAIT_EMPATH, TRAIT_NOSTINK, TRAIT_NOMOOD, TRAIT_NOSLEEP) //they'll choose their defense skill later
 	maximum_possible_slots = 2 //might reduce to 1, crit resist makes a big flare. 
 	extra_context = "This subclass, like all wretch subclasses, is still subject to the elevated rules and expectations that wretches must follow. You are held to a higher roleplay standard than everyone else, and your psychosis is not an OOC excuse for your gameplay to exclusively be killing others. Your character might be an insidious killer - but you are merely an actor, sharing the stage with everyone else."
 	subclass_stats = list(
@@ -17,10 +17,10 @@
     	STATKEY_INT = -1 //4 stat weight, gain more or exchange them for traits later. 1 / 0 / -1 / 0 / 1 / 1
 	)
 	subclass_skills = list(
-		/datum/skill/combat/knives = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/knives = SKILL_LEVEL_EXPERT,
 		/datum/skill/combat/swords = SKILL_LEVEL_JOURNEYMAN,
 		/datum/skill/combat/whipsflails = SKILL_LEVEL_JOURNEYMAN,
-		/datum/skill/misc/swimming = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/swimming = SKILL_LEVEL_EXPERT, //kill them, jason
 		/datum/skill/combat/wrestling = SKILL_LEVEL_JOURNEYMAN,
 		/datum/skill/combat/unarmed = SKILL_LEVEL_JOURNEYMAN,
 		/datum/skill/misc/athletics = SKILL_LEVEL_MASTER, //you can run
@@ -29,6 +29,9 @@
 		/datum/skill/misc/reading = SKILL_LEVEL_NOVICE,
 		/datum/skill/misc/sneaking = SKILL_LEVEL_JOURNEYMAN, //LOOK BEHIND YOU!!
 		/datum/skill/craft/crafting = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/medicine = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/craft/sewing = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/craft/cooking = SKILL_LEVEL_JOURNEYMAN, //giving them some crafting skills because A) they used to be towners maybe and B) they can't sleep to train themselves + the -1 INT
 		/datum/skill/craft/traps = SKILL_LEVEL_EXPERT,
 		/datum/skill/labor/butchering = SKILL_LEVEL_EXPERT
 	)
@@ -54,16 +57,16 @@
 		/obj/item/rope = 1,
 		/obj/item/reagent_containers/glass/bottle/alchemical/healthpot = 1,	//Small health vial
 		/obj/item/rogueweapon/scabbard/sheath = 1,
-		/obj/item/rogueweapon/huntingknife/chefknife/cleaver = 1 //they don't get a knife with pick roundstart, i really want to delay the inevitable here
+		/obj/item/rogueweapon/huntingknife/combat = 1 // all of em' get knives! this was a good idea :)
 		)
 	if(H.mind)
-		var/weapons = list("Kriegsmesser", "Flanged Mace + Shield", "Seax + 1 Wrestling", "Axe")
+		var/weapons = list("Kriegsmesser", "Flanged Mace + Shield", "Handclaw", "Axe")
 		var/weapon_choice = input(H, "Do you like hurting other people?", "TAKE UP ARMS") as anything in weapons
 		var/specialization = list("Quick (Dodge Expert, Sneaking, +2 SPD, +2 WIL)", "Crazy (Critical Resilience, No Pain Stun, +2 STR)") //thank you outlaw coders i love you mwah
 		var/specialization_choice = input(H, "How?", "TAKE UP ARMS") as anything in specialization
 		H.set_blindness(0)
 		switch(weapon_choice)
-			if("Kriegsmesser") // big knife
+			if("Kriegsmesser") // this is a knoife
 				H.adjust_skillrank_up_to(/datum/skill/combat/swords, SKILL_LEVEL_EXPERT, TRUE)
 				beltl = /obj/item/rogueweapon/scabbard/sword
 				l_hand = /obj/item/rogueweapon/sword/long/kriegmesser
@@ -72,11 +75,9 @@
 				H.adjust_skillrank_up_to(/datum/skill/combat/shields, SKILL_LEVEL_JOURNEYMAN, TRUE)
 				backr = /obj/item/rogueweapon/shield/tower
 				r_hand = /obj/item/rogueweapon/mace/cudgel/flanged
-			if ("Seax + 1 Wrestling") // little knife for stabby babes
-				H.adjust_skillrank_up_to(/datum/skill/combat/knives, SKILL_LEVEL_EXPERT, TRUE)
-				H.adjust_skillrank_up_to(/datum/skill/combat/wrestling, SKILL_LEVEL_EXPERT, TRUE) //i hope this is okay, the maximum strength they can get is 13 with muscular or thuggish. if this becomes a throat pick nightmare instead of maniac larp i'm gonna be very cross with you all.
-				l_hand = /obj/item/rogueweapon/huntingknife/combat
-				beltl = /obj/item/rogueweapon/scabbard/sheath
+			if ("Handclaw") // i went to the store, bought you a dreamwalker, the fuck you mean 
+				H.adjust_skillrank_up_to(/datum/skill/combat/unarmed, SKILL_LEVEL_EXPERT, TRUE)
+				l_hand = /obj/item/rogueweapon/handclaw/steel //these are really, really good, but they don't have an intent without swingdelay and these guys are never getting better than jman wrestling
 			if ("Axe") // classic
 				H.adjust_skillrank_up_to(/datum/skill/combat/axes, SKILL_LEVEL_EXPERT, TRUE)
 				l_hand = /obj/item/rogueweapon/stoneaxe/woodcut/steel
@@ -85,7 +86,7 @@
 				H.adjust_skillrank_up_to(/datum/skill/misc/sneaking, SKILL_LEVEL_MASTER, TRUE)
 				ADD_TRAIT(H, TRAIT_LIGHT_STEP, TRAIT_GENERIC)
 				ADD_TRAIT(H, TRAIT_DODGEEXPERT, TRAIT_GENERIC)
-				H.change_stat(STATKEY_SPD, 2) // 1 / 0 / -1 / 0 / 1 / 3. 9 weight. A more brutal outlaw - roughly a Marauder analogue, if you want to go there. Gets one extra stat point, because every other "Fast" wretch either gets amazing ranged options or holy.
+				H.change_stat(STATKEY_SPD, 2) // 1 / 0 / -1 / 0 / 1 / 3. 9 weight. A more brutal outlaw - roughly a Marauder analogue, if you want to go there.
 			if("Crazy (Critical Resilience, No Pain Stun, +2 STR)")
 				ADD_TRAIT(H, TRAIT_CRITICAL_RESISTANCE, TRAIT_GENERIC)
 				ADD_TRAIT(H, TRAIT_NOPAINSTUN, TRAIT_GENERIC)
