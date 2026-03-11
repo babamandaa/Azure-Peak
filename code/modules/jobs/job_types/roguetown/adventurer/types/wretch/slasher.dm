@@ -75,7 +75,7 @@
 				H.adjust_skillrank_up_to(/datum/skill/combat/shields, SKILL_LEVEL_JOURNEYMAN, TRUE)
 				backr = /obj/item/rogueweapon/shield/tower
 				r_hand = /obj/item/rogueweapon/mace/cudgel/flanged
-			if ("Handclaw") // i went to the store, bought you a dreamwalker, the fuck you mean 
+			if ("Handclaw") // i went to the store, bought you a dreamwalker, the fuck you mean it's the wrong one
 				H.adjust_skillrank_up_to(/datum/skill/combat/unarmed, SKILL_LEVEL_EXPERT, TRUE)
 				l_hand = /obj/item/rogueweapon/handclaw/steel //these are really, really good, but they don't have an intent without swingdelay and these guys are never getting better than jman wrestling
 			if ("Axe") // classic
