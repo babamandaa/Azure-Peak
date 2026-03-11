@@ -12,9 +12,9 @@
 	extra_context = "This subclass, like all wretch subclasses, is still subject to the elevated rules and expectations that wretches must follow. You are held to a higher roleplay standard than everyone else, and your psychosis is not an OOC excuse for your gameplay to exclusively be killing others. Your character might be an insidious killer - but you are merely an actor, sharing the stage with everyone else."
 	subclass_stats = list(
 		STATKEY_STR = 1,
-		STATKEY_WIL = 1,
+		STATKEY_WIL = 2,
     	STATKEY_SPD = 1,
-    	STATKEY_INT = -1 //4 stat weight, gain more or exchange them for traits later. 1 / 0 / -1 / 0 / 1 / 1
+    	STATKEY_INT = -1 //5 stat weight, gain more or exchange them for traits later. 1 / 0 / -1 / 0 / 2 / 1
 	)
 	subclass_skills = list(
 		/datum/skill/combat/knives = SKILL_LEVEL_EXPERT,
@@ -86,9 +86,9 @@
 				H.adjust_skillrank_up_to(/datum/skill/misc/sneaking, SKILL_LEVEL_MASTER, TRUE)
 				ADD_TRAIT(H, TRAIT_LIGHT_STEP, TRAIT_GENERIC)
 				ADD_TRAIT(H, TRAIT_DODGEEXPERT, TRAIT_GENERIC)
-				H.change_stat(STATKEY_SPD, 2) // 1 / 0 / -1 / 0 / 1 / 3. 9 weight. A more brutal outlaw - roughly a Marauder analogue, if you want to go there.
+				H.change_stat(STATKEY_SPD, 2) // 1 / 0 / -1 / 0 / 2 / 3. 9 weight. A more brutal outlaw - roughly a Marauder analogue, if you want to go there.
 			if("Crazy (Critical Resilience, No Pain Stun, +2 STR)")
 				ADD_TRAIT(H, TRAIT_CRITICAL_RESISTANCE, TRAIT_GENERIC)
 				ADD_TRAIT(H, TRAIT_NOPAINSTUN, TRAIT_GENERIC)
-				H.change_stat(STATKEY_STR, 2) // 3 / 0 / -1 / 0 / 1 / 1. 9 weight. Sort of Berserker-y, but with different flavor and weapon options.
+				H.change_stat(STATKEY_STR, 2) // 3 / 0 / -1 / 0 / 2 / 1. 9 weight. Sort of Berserker-y, but with different flavor and weapon options.
 		wretch_select_bounty(H)
