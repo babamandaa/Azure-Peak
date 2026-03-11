@@ -1,6 +1,6 @@
 /datum/advclass/wretch/slasher
 	name = "Maniac"
-	tutorial = "There is nothing more beautiful or soothing to you than the feeling of blood on your bare form. As a child, you may have harmed animals. Maybe you used to be a squire who was a bit too happy to break the other squire's noses. Maybe you just woke up one day and snapped - but you can feel your sanity unraveling, day by day, and you can feel it finally reach a head, now. Do you like hurting other people?"
+	tutorial = "There is nothing more beautiful or soothing to you than the feeling of blood on your bare form. As a child, you may have harmed animals. Perhaps you were squire who was a bit too happy to break the other squire's noses. Maybe you just snapped one day. You are the only person who can tell yourself why you do what you do. The question is - do you even *like* hurting other people?"
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_ALL_KINDS
 	outfit = /datum/outfit/job/roguetown/wretch/slasher
@@ -9,7 +9,7 @@
 	category_tags = list(CTAG_WRETCH)
 	traits_applied = list(TRAIT_PSYCHOSIS, TRAIT_BLOOD_RESISTANCE) //they'll choose their defense skill later
 	maximum_possible_slots = 2 //might reduce to 1, crit resist makes a big flare. 
-	extra_context = "Maniacs come in all shapes and sizes - some of them are quick, slinking through the shadows to find their next prey, and some of them are crazy, enduring terrifying amounts of damage in the pursuit of satisfying their bloodlust. What kind of monster are you?"
+	extra_context = "This subclass, like all wretch subclasses, is still subject to the elevated rules and expectations that wretches must follow. You are held to a higher roleplay standard than everyone else, and your psychosis is not an OOC excuse for your gameplay to exclusively be killing others. Your character might be an insidious killer - but you are merely an actor, merely sharing the stage with everyone else."
 	subclass_stats = list(
 		STATKEY_STR = 1,
 		STATKEY_WIL = 1,
