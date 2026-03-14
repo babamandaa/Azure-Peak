@@ -52,7 +52,7 @@
 //The old version made the bclass worse since you already HAVE the ability to dismember and just lost access to a great bclass in lashing. pens armor weak against slashing, ok for what's basically inq exclusive
 /datum/intent/whip/lash/master
 	name = "masterful lash"
-	desc = "Lash the whip against a target from afar, leveraging your unique weapon to penetrate lighter armor. </br>Uniquely deals lashing wounds, which inflicts tremendous blood loss and pain onto the target. </br>Critical hits leave permenant scars, unremovable under most circumstances.
+	desc = "Lash the whip against a target from afar, leveraging your unique weapon to penetrate lighter armor. </br>Uniquely deals lashing wounds, which inflicts tremendous blood loss and pain onto the target. </br>Critical hits leave permenant scars, unremovable under most circumstances."
 	damfactor = 1.1
 	penfactor = 40
 	attack_verb = list("deftly lashes", "sharply cracks")
