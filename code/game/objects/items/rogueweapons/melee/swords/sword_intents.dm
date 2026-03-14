@@ -309,7 +309,7 @@
 
 /datum/intent/sword/bash/good
 	name = "strong bash"
-	damfactor = 1 //go, my child. be the mace you were always meant to be
+	damfactor = 0.9 //go, my child. be the mace you were always meant to be
 
 // GREATSWORDS
 /datum/intent/sword/cut/zwei
