@@ -307,6 +307,10 @@
 	item_d_type = "blunt"
 	intent_intdamage_factor = BLUNT_DEFAULT_INT_DAMAGEFACTOR
 
+/datum/intent/sword/bash/good
+	name = "strong bash"
+	damfactor = 1 //go, my child. be the mace you were always meant to be
+
 // GREATSWORDS
 /datum/intent/sword/cut/zwei
 	reach = 2

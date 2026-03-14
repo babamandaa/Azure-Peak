@@ -35,7 +35,7 @@
 // INTENTS!             //
 //////////////////////////
 
-//Lash = default, can't dismember, so more range and some pen.
+//Lash = default, it's fine, it's got the highest range and a great bclass when you break their armor.
 /datum/intent/whip/lash
 	name = "lash"
 	desc = "Lash the whip against a target from afar. </br>Uniquely deals lashing wounds, which inflicts tremendous blood loss and pain onto the target. </br>Critical hits leave permenant scars, unremovable under most circumstances."
@@ -49,11 +49,12 @@
 	icon_state = "inlash"
 	item_d_type = "slash"
 
-//Exclusive variant to whips with alloyed tips and high Strength requirements. On par with a traditional lash, but can dismember from afar.
+//The old version made the bclass worse since you already HAVE the ability to dismember and just lost access to a great bclass in lashing. pens armor weak against slashing, ok for what's basically inq exclusive
 /datum/intent/whip/lash/master
-	name = "lash with dismembering force"
-	desc = "Lash the whip against a target from afar, leveraging your strength to lash their limbs apart. </br>Critical hits can uniquely dismember limbs and cause disembowelements."
-	blade_class = BCLASS_CUT
+	name = "masterful lash"
+	desc = "Lash the whip against a target from afar, leveraging your unique weapon to penetrate lighter armor. </br>Uniquely deals lashing wounds, which inflicts tremendous blood loss and pain onto the target. </br>Critical hits leave permenant scars, unremovable under most circumstances.
+	damfactor = 1.1
+	penfactor = 40
 	attack_verb = list("deftly lashes", "sharply cracks")
 
 //Crack = cut damage, can dismember, so lower range.
@@ -91,9 +92,9 @@
 	hitsound = list('sound/combat/hits/blunt/flailhit.ogg')
 	chargetime = 0
 	recovery = 5
-	damfactor = 1.2							//No range, gets bonus damage - using this even on weak SHOULD let you get perma-scars then.
-	penfactor = BLUNT_DEFAULT_PENFACTOR		//No pen cus punishment intent.
-	reach = 1								//No range, cus not meant to be a flat-out combat intent.
+	damfactor = 1.2							//why would you give a weapon a non-combat intent
+	penfactor = BLUNT_DEFAULT_PENFACTOR		//still blunt!
+	reach = 2								//gets some range back, we'll see how this goes. doesn't have bclass_blunt so it's not chewing through armor like a mace, i tested this don't worry
 	icon_state = "inpunish"
 	item_d_type = "slash"
 
@@ -147,7 +148,7 @@
 	is_silver = TRUE
 	force = 25
 	possible_item_intents = list(/datum/intent/whip/lash/master, /datum/intent/whip/crack, /datum/intent/whip/punish)
-	minstr = 11
+	minstr = 9 //it's a WHIP
 	wdefense = 0
 	anvilrepair = /datum/skill/craft/weaponsmithing
 	smeltresult = /obj/item/ingot/silver
@@ -169,7 +170,7 @@
 	icon_state = "silverwhip"
 	force = 23 //Experimental change - adds a +2 to force, as a bridge between handweapons and blunt weapons. Higher strength minimum. Do not raise above 25, unless you want to resurrect maille-shatterers.
 	possible_item_intents = list(/datum/intent/whip/lash/master, /datum/intent/whip/crack, /datum/intent/whip/punish)
-	minstr = 11
+	minstr = 11 //this one i kind of get because you're a belmont
 	wdefense = 0
 	is_silver = TRUE
 	smeltresult = /obj/item/ingot/silver

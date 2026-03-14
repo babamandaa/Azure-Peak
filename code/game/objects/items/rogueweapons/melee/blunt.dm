@@ -197,6 +197,7 @@
 	icon_state = "smace"
 	smeltresult = /obj/item/ingot/steel
 	wdefense = 3
+	wdefense_wbonus = 4
 	smelt_bar_num = 2
 
 /obj/item/rogueweapon/mace/steel/palloy
@@ -213,7 +214,7 @@
 	icon_state = "silvermace"
 	smeltresult = /obj/item/ingot/silver
 	minstr = 10
-	wdefense = 5
+	wdefense = 4
 	smelt_bar_num = 2
 	swingsound = BLUNTWOOSH_LARGE
 	is_silver = TRUE
@@ -901,6 +902,7 @@
 	smelt_bar_num = 2
 	minstr = 14
 	wdefense = 3
+	wdefense_wbonus = 4
 	pixel_y = -16
 	pixel_x = -16
 	inhand_x_dimension = 64
@@ -927,7 +929,7 @@
 	force_wielded = 34 // -1 compared to grand mace.
 	smeltresult = /obj/item/ingot/steel
 	minstr = 15
-	wdefense_wbonus = 4 // from 6
+	wdefense_wbonus = 5 // from 6
 	smelt_bar_num = 3
 
 //Malumite maul. Intended for Templars.
@@ -953,7 +955,7 @@
 	icon_state = "dwarfhammer"
 	smeltresult = /obj/item/ingot/steel
 	minstr = 11 // +2STR from Grudgebearer Soldier. Should cover this.
-	wdefense_wbonus = 3 // 5
+	wdefense_wbonus = 5 // 5
 	smelt_bar_num = 3 // You'll break my heart.
 	max_integrity = 390
 
@@ -963,7 +965,6 @@
 	This one has been well balanced, allowing for a weaker wielder to make use of it."
 	icon_state = "spiky"
 	gripped_intents = list(/datum/intent/maul/spiked, /datum/intent/mace/smash/grand, /datum/intent/mace/sweep, /datum/intent/effect/hobble)
-	wdefense_wbonus = 2 //4
 	minstr = 10 //+1 STR from Grudgebearer Smith. It should be fine.
 	smelt_bar_num = 3 //Please don't...
 	max_integrity = 370

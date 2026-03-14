@@ -179,13 +179,11 @@
 	icon_state = "broadsword"
 	sheathe_icon = "broadsword"
 	swingsound = BLADEWOOSH_HUGE
-	max_blade_int = 230 //Less of an edge than the longsword..
-	max_integrity = 180 //..but tougher.
-	wdefense_wbonus = 3 // Same defense when one-handed, but slightly reduced wielded defense compared to the longsword.
-	possible_item_intents = list(/datum/intent/sword/chop/broadsword, /datum/intent/sword/thrust/long/broadsword, /datum/intent/sword/strike, /datum/intent/sword/peel/light)
-	gripped_intents = list(/datum/intent/sword/chop/broadsword, /datum/intent/sword/thrust/long/broadsword/heavy, /datum/intent/sword/strike, /datum/intent/sword/peel/light)
-	alt_intents = list(/datum/intent/sword/strike, /datum/intent/sword/bash, /datum/intent/effect/daze, /datum/intent/sword/cut/broadsword)
-	smeltresult = /obj/item/ingot/iron //Sidegrade of the longswords and battle axes - non-blunt attacks hit harder, but are always telegraphed and swing-delayed.
+	max_integrity = 180 //a lil bit tougher than a longsword
+	possible_item_intents = list(/datum/intent/sword/chop/broadsword, /datum/intent/sword/thrust/long/broadsword, /datum/intent/sword/strike)
+	gripped_intents = list(/datum/intent/sword/chop/broadsword, /datum/intent/sword/thrust/long/broadsword/heavy, /datum/intent/sword/strike, /datum/intent/rend/broadsword)
+	alt_intents = list(/datum/intent/sword/bash/good, /datum/intent/effect/daze, /datum/intent/sword/cut/broadsword)
+	smeltresult = /obj/item/ingot/iron //removed peel from this girlie, encouraging them to use their now much stronger alt grip as a hybrid blunt/slashing weapon
 
 /obj/item/rogueweapon/sword/long/broadsword/bronze
 	name = "spatha"
@@ -752,7 +750,7 @@
 	wdefense = 6
 	possible_item_intents = list(/datum/intent/rend/broadsword, /datum/intent/sword/chop/broadsword, /datum/intent/sword/thrust/long/broadsword, /datum/intent/sword/strike)
 	gripped_intents = list(/datum/intent/rend/broadsword, /datum/intent/sword/chop/broadsword, /datum/intent/sword/thrust/long/broadsword/heavy, /datum/intent/sword/strike)
-	alt_intents = list(/datum/intent/sword/strike, /datum/intent/sword/bash, /datum/intent/effect/daze, /datum/intent/sword/cut/broadsword)
+	alt_intents = list(/datum/intent/sword/bash/good, /datum/intent/effect/daze, /datum/intent/sword/cut/broadsword)
 	mordhau = TRUE
 	smeltresult = /obj/item/ingot/silver
 	is_silver = TRUE
@@ -780,7 +778,7 @@
 	wdefense = 6
 	possible_item_intents = list(/datum/intent/rend/broadsword, /datum/intent/sword/chop/broadsword, /datum/intent/sword/thrust/long/broadsword, /datum/intent/sword/strike)
 	gripped_intents = list(/datum/intent/rend/broadsword, /datum/intent/sword/chop/broadsword, /datum/intent/sword/thrust/long/broadsword/heavy, /datum/intent/sword/strike)
-	alt_intents = list(/datum/intent/sword/strike, /datum/intent/sword/bash, /datum/intent/effect/daze, /datum/intent/sword/cut/broadsword)
+	alt_intents = list(/datum/intent/sword/bash/good, /datum/intent/effect/daze, /datum/intent/sword/cut/broadsword)
 	mordhau = TRUE
 	smeltresult = /obj/item/ingot/silverblessed
 	is_silver = TRUE
