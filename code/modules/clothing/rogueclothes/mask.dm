@@ -67,7 +67,7 @@
 	icon_state = "bglasses"
 	desc = "Made to both ENDURE and incite debate within those few Noc-Sainted within Otava. Noc-lit walks, yae or nae? The lenses look like they can be brushed aside with a carefully guided right-pointer finger led motion."
 	attacked_sound = 'sound/combat/hits/onglass/glasshit.ogg'
-	max_integrity = 300
+	max_integrity = 250
 	integrity_failure = 0.5
 	resistance_flags = FIRE_PROOF
 	body_parts_covered = EYES
@@ -305,7 +305,7 @@
 	blocksound = PLATEHIT
 	break_sound = 'sound/foley/breaksound.ogg'
 	drop_sound = 'sound/foley/dropsound/armor_drop.ogg'
-	max_integrity = 100
+	max_integrity = 125
 	resistance_flags = FIRE_PROOF
 	armor = ARMOR_PLATE
 	flags_inv = HIDEFACE|HIDESNOUT
@@ -320,7 +320,7 @@
 	name = "iron mask"
 	desc = "A simple, utilitarian mask designed to protect the face from oncoming blows."
 	icon_state = "imask"
-	max_integrity = 100
+	max_integrity = 125
 	blocksound = PLATEHIT
 	break_sound = 'sound/foley/breaksound.ogg'
 	drop_sound = 'sound/foley/dropsound/armor_drop.ogg'
@@ -400,7 +400,7 @@
 	desc = "Expressionless steel sits where a face ought to be. It is better to be \
 	safe than to be known."
 	icon_state = "smask"
-	max_integrity = 200
+	max_integrity = 175
 	smeltresult = /obj/item/ingot/steel
 
 /obj/item/clothing/mask/rogue/facemask/steel/paalloy
